@@ -1,7 +1,16 @@
-function Contato(){
+import { Fragment } from "react";
+import Header from "../Components/Header/Header";
+import Contact from "../Components/Contact/Contact";
+import Footer from "../Components/Footer/Footer"
+
+function Formacao(){
     return(
-        <h1>Teste 3</h1>
+        <Fragment>
+            <Header />
+            <Contact />
+            <Footer />
+        </Fragment>  
     )
 }
 
-export default Contato
+export default Formacao

@@ -4,7 +4,7 @@ import css from './css.png'
 import javascript from './javascript.png'
 import react from './react.png'
 import git from './git.png'
-import './Stacks.css';
+//import './Stacks.css';
 
 function Stacks(props) {
 

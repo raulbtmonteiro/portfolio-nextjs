@@ -4,7 +4,7 @@ import ufsj from './ufsj.png'
 import senai from './senai.png'
 import ideal from './ideal.png'
 import cenje from './cenje.png'
-import './Education.css';
+//import './Education.css';
 
 class Formation extends Component {
 

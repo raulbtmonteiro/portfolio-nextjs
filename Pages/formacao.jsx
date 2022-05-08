@@ -1,6 +1,17 @@
+import { Fragment } from "react";
+import Header from "../Components/Header/Header";
+import Education from "../Components/Education/Education";
+import Experiences from "../Components/Experiences/Experiences";
+import Footer from "../Components/Footer/Footer"
+
 function Formacao(){
     return(
-        <h1>Teste 3</h1>
+        <Fragment>
+            <Header />
+            <Education />
+            <Experiences />
+            <Footer />
+        </Fragment>  
     )
 }
 

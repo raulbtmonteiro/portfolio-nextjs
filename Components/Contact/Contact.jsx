@@ -4,7 +4,7 @@ import instagram from './instagram.png';
 import github from './github.png';
 import linkedin from './linkedin.png';
 import whatsapp from './whatsapp-verde.png';
-import './Contact.css';
+//import './Contact.css';
 
 class Contact extends Component {
 
