@@ -73,7 +73,7 @@ class Contact extends Component {
               </label>
               <button type="submit">Enviar</button>
               <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value="http://localhost:3000/" />
+              <input type="hidden" name="_next" value="https://portfolio-nextjs-ecru-three.vercel.app/" />
             </form>
           </div>
           <div className='contact-info'>
