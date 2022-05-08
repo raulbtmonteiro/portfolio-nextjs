@@ -1,8 +1,8 @@
-import AboutMe from "../Components/AboutMe/AboutMe"
+import Header from "../Components/Header/Header"
 
 function Home(){
     return(
-        <AboutMe />
+        <Header />
     )
 }
 

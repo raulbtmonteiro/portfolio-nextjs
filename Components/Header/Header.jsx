@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from "next/link";
 import './Header.css'
 
 const navItens = [ 
@@ -25,7 +25,7 @@ function Header(props) {
   const RenderNavItens = ({itens}) => {
     return(
       itens.map( (index) => (
-        <li className='nav-bar-item'><Link className='nar-bar-link' to={index.link}>{index.titulo}</Link></li>
+        <li className='nav-bar-item'><Link className='nar-bar-link' href={index.link}>{index.titulo}</Link></li>
       ))
     )
   }
