@@ -1,9 +1,9 @@
 import { Fragment } from 'react';
 import React, { Component } from 'react';
-import ufsj from './ufsj.png'
-import senai from './senai.png'
-import ideal from './ideal.png'
-import cenje from './cenje.png'
+import ufsj from '../../public/images/ufsj'
+import senai from '../../public/images/senai'
+import ideal from '../../public/images/ideal'
+import cenje from '../../public/images/cenje'
 //import './Education.css';
 
 class Formation extends Component {
