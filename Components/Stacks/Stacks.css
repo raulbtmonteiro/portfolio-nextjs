@@ -1,0 +1,26 @@
+.stacks {
+  background-color: #ffffff;
+  height: 400px;
+}
+
+.stacks-wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 1170px;
+  align-items: center;
+  margin: auto auto;
+  justify-content: space-evenly;
+
+}
+
+.flex-container{
+  display: flex;
+  align-items: center;
+  gap: 35px
+}
+
+.stacks-wrapper img{
+  width: 85px;
+  height: auto;
+}

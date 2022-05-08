@@ -1,0 +1,13 @@
+footer {
+    height: 150px;
+    background-color: #EFF8FF;
+}
+  
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+    height: 100%;
+    align-items: center;
+}

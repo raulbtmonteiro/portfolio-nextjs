@@ -1,0 +1,35 @@
+header {
+  height: 70px;
+}
+
+.header-wrapper{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 100%;
+  align-items: center;
+}
+
+.logo{
+  height: 30px;
+  width: auto;
+}
+
+#nav-bar {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-bar-item {
+  margin-left: 66px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #6E7275;
+}
+
+.nav-bar-item a{
+  text-decoration: none;
+  color: #6E7275;
+}
