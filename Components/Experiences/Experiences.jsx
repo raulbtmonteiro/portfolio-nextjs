@@ -27,13 +27,13 @@ function Experiences(props) {
             principal= 'false'
           />
           <ExperienceCard
-            img='/images/mrs.png'
+            img='/images/mrv.png'
             position= 'Estagiário de Obra'
             description= 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum '
             principal= 'false'
           />
           <ExperienceCard
-            img='/images/mrs.png'
+            img='/images/banco-do-brasil.png'
             position= 'Agente Comercial'
             description= 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum '
             principal= 'true'

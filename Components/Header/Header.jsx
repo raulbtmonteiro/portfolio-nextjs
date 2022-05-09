@@ -33,8 +33,7 @@ function Header(props) {
   return (
     <header>
       <div className='header-wrapper'>
-        <h1>Raul Monteiro</h1>
-        <img className='logo' src={props.logo}></img>
+        <h1 className="logo"><Link href='/'>Raul Monteiro</Link></h1>
         <nav>
           <ul id='nav-bar'>
             <RenderNavItens itens={navItens}/>

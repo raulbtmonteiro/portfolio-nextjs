@@ -10,7 +10,9 @@ function AboutMe() {
           <img src='/images/foto.jpg' />
         </div>
         <div className='aboutme-info'>
-          <h1>hello world, my name is: </h1>
+          <p>Hello World, eu sou o</p>
+          <h1>Raul Monteiro</h1>
+          <p>Estudante de programação para aplicações Front-End.</p>
         </div>        
       </div>
     </div>

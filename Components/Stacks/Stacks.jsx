@@ -38,12 +38,12 @@ function Stacks(props) {
         <h1>Conhecimento em:</h1>
         <div className='flex-container'>
           <img src='/images/html.png' />
-          <img src='/images/html.png' />
-          <img src='/images/html.png' />
+          <img src='/images/css.png' />
+          <img src='/images/javascript.png' />
         </div>
         <div className='flex-container'>
-          <img src='/images/html.png' />
-          <img src='/images/html.png' />
+          <img src='/images/react.png' />
+          <img src='/images/git.png' />
         </div>
       </div>
     </div>

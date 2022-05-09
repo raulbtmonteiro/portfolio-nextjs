@@ -1,5 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .stacks {
-  background-color: #ffffff;
+  background-color: #110b3b;
   height: 400px;
 }
 
@@ -11,7 +16,10 @@
   align-items: center;
   margin: auto auto;
   justify-content: space-evenly;
+}
 
+.stacks-wrapper h1{
+  color: white;
 }
 
 .flex-container{

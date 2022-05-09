@@ -1,5 +1,5 @@
 .aboutme {
-  background-color: #EFF8FF;
+  background-color: #110b3b;
   height: 650px;
 }
 
@@ -14,12 +14,16 @@
   align-items: center;
 }
 
-.aboutme-info{
+.aboutme-info p{
+  color: white;
+}
 
+.aboutme-info h1{
+  color: #67264e;
 }
 
 .aboutme-img img{
   width: 400px;
   max-width: 80%;
-  box-shadow: -20px -20px #6E7275;
+  box-shadow: -20px -20px #36356e;
 }

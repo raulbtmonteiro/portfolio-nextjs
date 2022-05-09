@@ -5,7 +5,8 @@ import '../Components/Education/Education.css';
 import '../Components/Experiences/Experiences.css';
 import '../Components/Footer/Footer.css';
 import '../Components/Header/Header.css';
-import '../Components/Stacks/Stacks.css'
+import '../Components/Stacks/Stacks.css';
+import '../Components/global.css'
 
 export default function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
