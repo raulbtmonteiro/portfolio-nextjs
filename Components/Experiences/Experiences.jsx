@@ -21,19 +21,19 @@ function Experiences(props) {
         <h2 className='experiences-title'>Experiências Profissionais</h2>
         <div className='experiences-display'>
           <ExperienceCard
-            img={mrs}
+            img='/images/mrs.png'
             position= 'Estagiário de Operação de Trens'
             description= 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum '
             principal= 'false'
           />
           <ExperienceCard
-            img={mrv}
+            img='/images/mrs.png'
             position= 'Estagiário de Obra'
             description= 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum '
             principal= 'false'
           />
           <ExperienceCard
-            img={bb}
+            img='/images/mrs.png'
             position= 'Agente Comercial'
             description= 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum '
             principal= 'true'

@@ -77,10 +77,10 @@ class Contact extends Component {
             </form>
           </div>
           <div className='contact-info'>
-            <a href='https://www.linkedin.com/in/monteiroraul/' target='_blank'><img src={linkedin} /></a>
-            <a href='https://www.github.com/raulbtmonteiro' target='_blank'><img src={github} /></a>
-            <a href='https://wa.me/5531997201454' target='_blank'><img src={whatsapp} /></a>
-            <a href='https://www.instagram.com/raulbtm' target='_blank'><img src={instagram} /></a>
+            <a href='https://www.linkedin.com/in/monteiroraul/' target='_blank'><img src='/images/linkedin.png' /></a>
+            <a href='https://www.github.com/raulbtmonteiro' target='_blank'><img src='/images/github.png' /></a>
+            <a href='https://wa.me/5531997201454' target='_blank'><img src='/images/whatsapp-verde.png' /></a>
+            <a href='https://www.instagram.com/raulbtm' target='_blank'><img src='/images/instagram.png' /></a>
           </div>      
         </div>
       </div>

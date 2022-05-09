@@ -13,17 +13,17 @@ class Formation extends Component {
     this.state ={
       formations: [
         {
-          img: senai,
+          img: '/images/senai.png',
           title: 'Técnico em Segurança do Trabalho',
           completion: 'out/2012'
         } ,
         {
-          img:ufsj,
+          img: '/images/ufsj.png',
           title: 'Bacharel em Ciência e Tecnologia',
           completion: 'dez/2017'
         } ,
         {
-          img:ufsj,
+          img: '/images/ufsj.png',
           title: 'Bacharel em Engenharia Civil',
           completion: 'jul/2022'
         }
@@ -57,21 +57,21 @@ class ExtraClass extends Component {
           title: 'Monitoria de Cálculo I',
           class: 'hidden-card',
           classSeta: 'seta',
-          img: ufsj,
+          img: '/images/ufsj.png',
           description:'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum '
         },
         {
           title: 'Ideal Consultoria e Empreendimentos',
           class: 'hidden-card',
           classSeta: 'seta',
-          img: ideal,
+          img: '/images/ideal.png',
           description:'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum '
         },
         {
           title: 'Central de Empresas Juniores da UFSJ',
           class: 'hidden-card',
           classSeta: 'seta',
-          img: cenje,
+          img: '/images/cenje.png',
           description:'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum '
         }
 
