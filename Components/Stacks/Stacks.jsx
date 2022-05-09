@@ -1,10 +1,34 @@
 import { Component } from 'react';
-import html from '/images/html.png'
-import css from '/images/css.png'
-import javascript from '/images/javascript.png'
-import react from '/images/react.png'
-import git from '/images/git.png'
+//import html from '/images/html.png'
+//import css from '/images/css.png'
+//import javascript from '/images/javascript.png'
+//import react from '/images/react.png'
+//import git from '/images/git.png'
+import { useState } from 'react';
 //import './Stacks.css';
+
+const[images, setImages]= useState[
+  {
+    name: 'html',
+    img_url: '/images/html.png'
+  },
+  {
+    name: 'css',
+    img_url:'/images/css.png'
+  },
+  {
+    name: 'javascript',
+    img_url: '/images/javascript.png'
+  },
+  {
+    name: 'react',
+    img_url: '/images/react.png'
+  },
+  {
+    name: 'git',
+    img_url: '/images/git.png'
+  }
+]
 
 function Stacks(props) {
 
@@ -13,13 +37,13 @@ function Stacks(props) {
       <div className='stacks-wrapper'>
         <h1>Conhecimento em:</h1>
         <div className='flex-container'>
-          <img src={html} />
-          <img src={css} />
-          <img src={javascript} />
+          <img src={images[0].img_url} />
+          <img src={images[1].img_url} />
+          <img src={images[2].img_url} />
         </div>
         <div className='flex-container'>
-          <img src={react} />
-          <img src={git} />
+          <img src={images[3].img_url} />
+          <img src={images[4].img_url} />
         </div>
       </div>
     </div>
