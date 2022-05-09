@@ -1,6 +1,6 @@
-import mrs from '/images/mrs.png';
-import mrv from '/images/mrv.png';
-import bb from '/images/banco-do-brasil.png';
+//import mrs from '/images/mrs.png';
+//import mrv from '/images/mrv.png';
+//import bb from '/images/banco-do-brasil.png';
 //import './Experiences.css';
 
 function ExperienceCard (props) {

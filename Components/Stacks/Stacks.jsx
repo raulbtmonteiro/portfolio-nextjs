@@ -4,10 +4,10 @@ import { Component } from 'react';
 //import javascript from '/images/javascript.png'
 //import react from '/images/react.png'
 //import git from '/images/git.png'
-import { useState } from 'react';
+import React, { useState } from 'react';
 //import './Stacks.css';
 
-const[images, setImages]= useState[
+const[state, setState]= useState(
   {
     name: 'html',
     img_url: '/images/html.png'
@@ -28,7 +28,7 @@ const[images, setImages]= useState[
     name: 'git',
     img_url: '/images/git.png'
   }
-]
+)
 
 function Stacks(props) {
 
@@ -37,13 +37,13 @@ function Stacks(props) {
       <div className='stacks-wrapper'>
         <h1>Conhecimento em:</h1>
         <div className='flex-container'>
-          <img src={images[0].img_url} />
-          <img src={images[1].img_url} />
-          <img src={images[2].img_url} />
+          <img src={this.state[0].img_url} />
+          <img src={this.state[1].img_url} />
+          <img src={this.state[2].img_url} />
         </div>
         <div className='flex-container'>
-          <img src={images[3].img_url} />
-          <img src={images[4].img_url} />
+          <img src={this.state[3].img_url} />
+          <img src={this.state[4].img_url} />
         </div>
       </div>
     </div>

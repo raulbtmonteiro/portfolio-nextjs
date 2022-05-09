@@ -1,4 +1,4 @@
-import selfie from '/images/foto.jpg';
+//import selfie from '/images/foto.jpg';
 //import './AboutMe.css';
 
 function AboutMe() {
@@ -7,7 +7,7 @@ function AboutMe() {
     <div className='aboutme'>
       <div className='aboutme-wrapper'>
         <div className='aboutme-img'>
-          <img src={selfie} />
+          <img src='/images/foto.jpg' />
         </div>
         <div className='aboutme-info'>
           <h1>hello world, my name is: </h1>
