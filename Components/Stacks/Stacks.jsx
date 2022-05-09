@@ -7,7 +7,7 @@ import { Component } from 'react';
 import React, { useState } from 'react';
 //import './Stacks.css';
 
-const[state, setState]= useState(
+const[state, setState]= useState([
   {
     name: 'html',
     img_url: '/images/html.png'
@@ -28,7 +28,7 @@ const[state, setState]= useState(
     name: 'git',
     img_url: '/images/git.png'
   }
-)
+])
 
 function Stacks(props) {
 
