@@ -1,9 +1,9 @@
 import { Component } from 'react';
-import html from '../../public/images/html'
-import css from '../../public/images/css'
-import javascript from '../../public/images/javascript'
-import react from '../../public/images/react'
-import git from '../../public/images/git'
+import html from '../../public/images/html.png'
+import css from '../../public/images/css.png'
+import javascript from '../../public/images/javascript.png'
+import react from '../../public/images/react.png'
+import git from '../../public/images/git.png'
 //import './Stacks.css';
 
 function Stacks(props) {

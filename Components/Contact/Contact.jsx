@@ -1,9 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
-import instagram from '../../public/images/instagram';
-import github from '../../public/images/github';
-import linkedin from '../../public/images/linkedin';
-import whatsapp from '../../public/images/whatsapp';
+import instagram from '../../public/images/instagram.png';
+import github from '../../public/images/github.png';
+import linkedin from '../../public/images/linkedin.png';
+import whatsapp from '../../public/images/whatsapp.png';
 //import './Contact.css';
 
 class Contact extends Component {

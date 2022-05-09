@@ -1,4 +1,4 @@
-import selfie from '../../public/images/foto';
+import selfie from '../../public/images/foto.jpg';
 //import './AboutMe.css';
 
 function AboutMe() {
