@@ -25,5 +25,5 @@
 .aboutme-img img{
   width: 400px;
   max-width: 80%;
-  box-shadow: -20px -20px #36356e;
+  border-radius: 15px;
 }
