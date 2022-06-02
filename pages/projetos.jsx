@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import Header from "../Componentsa/Header";
-import Footer from "../Componentsa/Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Projetos() {
   return (

@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import Header from "../Componentsa/Header";
-import Contact from "../Componentsa/Contact";
-import Footer from "../Componentsa/Footer";
+import Header from "../components/Header";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 function Formacao() {
   return (

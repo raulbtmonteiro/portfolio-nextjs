@@ -1,8 +1,8 @@
 import { Fragment } from "react";
-import Header from "../Componentsa/Header";
-import AboutMe from "../Componentsa/AboutMe";
-import Stacks from "../Componentsa/Stacks";
-import Footer from "../Componentsa/Footer";
+import Header from "../components/Header";
+import AboutMe from "../components/AboutMe";
+import Stacks from "../components/Stacks";
+import Footer from "../components/Footer";
 
 function Home() {
   return (

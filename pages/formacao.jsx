@@ -1,8 +1,8 @@
 import { Fragment } from "react";
-import Header from "../Componentsa/Header";
-import Education from "../Componentsa/Education";
-import Experiences from "../Componentsa/Experiences";
-import Footer from "../Componentsa/Footer";
+import Header from "../components/Header";
+import Education from "../components/Education";
+import Experiences from "../components/Experiences";
+import Footer from "../components/Footer";
 
 function Formacao() {
   return (
