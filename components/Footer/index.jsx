@@ -1,12 +1,12 @@
-import react from "react";
-//import './Footer.css'
+import { dark } from "../../themes/dark";
+import { FooterContainer, FooterWrapper, Copyright } from "./style";
 
-function Footer(){
-    return(
-        <footer>
-            
-        </footer>
-    )
-}
-
-export default Footer
+export const Footer = () => {
+  return (
+    <FooterContainer theme={dark}>
+      <FooterWrapper>
+        <Copyright>2022 - Iuri Silva</Copyright>
+      </FooterWrapper>
+    </FooterContainer>
+  );
+};

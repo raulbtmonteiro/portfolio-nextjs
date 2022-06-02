@@ -1,48 +1,44 @@
 import Link from "next/link";
-//import './Header.css'
+import { dark } from "../../themes/dark";
+import {
+  HeaderContainer,
+  HeaderWrapper,
+  HeaderTitle,
+  HeaderNavBar,
+} from "./style";
 
-const navItens = [ 
+const navItens = [
   {
-    titulo: 'Sobre mim',
-    link: '/'
-  }, 
-  {
-    titulo: 'Projetos',
-    link: '/projetos'
+    titulo: "Home",
+    link: "/",
   },
   {
-    titulo: 'Formação/Esperiências',
-    link: '/formacao'
+    titulo: "Sobre mim",
+    link: "/",
   },
   {
-    titulo: 'Contato',
-    link: '/contato'
-  }
-]
+    titulo: "Esperiências",
+    link: "/formacao",
+  },
+  {
+    titulo: "Projetos",
+    link: "/projetos",
+  },
+];
 
-function Header(props) {
-
-  const RenderNavItens = ({itens}) => {
-    return(
-      itens.map( (index) => (
-        <li className='nav-bar-item'><Link className='nar-bar-link' href={index.link}>{index.titulo}</Link></li>
-      ))
-    )
-  }
- 
+export const Header = () => {
   return (
-    <header>
-      <div className='header-wrapper'>
-
-        <nav>
-          <ul id='nav-bar'>
-            <RenderNavItens itens={navItens}/>
-          </ul>
-        </nav>
-      </div>
-    </header>
-  
+    <HeaderContainer theme={dark}>
+      <HeaderWrapper>
+        <HeaderTitle>Portfólio</HeaderTitle>
+        <HeaderNavBar>
+          {navItens.map((item) => {
+            <li>
+              <Link href={item.link}>{item.titulo}</Link>
+            </li>;
+          })}
+        </HeaderNavBar>
+      </HeaderWrapper>
+    </HeaderContainer>
   );
-}
-
-export default Header
+};

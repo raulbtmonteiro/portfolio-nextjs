@@ -1,22 +1,62 @@
-//import selfie from '/images/foto.jpg';
-//import './AboutMe.css';
+import { dark } from "../../themes/dark";
+import {
+  AboutMeContainer,
+  AboutMeWrapper,
+  AboutMeImg,
+  AboutMeInfo,
+  AboutMeTitle,
+  AboutMeLocation,
+  AboutMeDescription,
+  SocialMediaList,
+} from "./style";
 
-function AboutMe() {
+const socialMediaArray = [
+  {
+    name: "twitter",
+    icon: "/images/social_media/twitter.svg",
+    alt: "logo do twitter",
+    url: "https://twitter.com/tortaraul",
+  },
+  {
+    name: "youtube",
+    icon: "/images/social_media/youtube.svg",
+    alt: "logo do youtube",
+    url: "https://www.youtube.com/user/raulbtmonteiro/",
+  },
+  {
+    name: "instagram",
+    icon: "/images/social_media/instagram.svg",
+    alt: "logo do instagram",
+    url: "https://www.instagram.com/raulbtm/",
+  },
+  {
+    name: "facebook",
+    icon: "/images/social_media/facebook.svg",
+    alt: "logo do facebook",
+    url: "https://www.facebook.com/monteirorbt/",
+  },
+];
 
+export const AboutMe = () => {
   return (
-    <div className='aboutme'>
-      <div className='aboutme-wrapper'>
-        <div className='aboutme-img'>
-          <img src='/images/foto.jpg' />
-        </div>
-        <div className='aboutme-info'>
-          <p>Hello World, eu sou o</p>
-          <h1>Raul Monteiro</h1>
-          <p>Estudante de programação para aplicações Front-End.</p>
-        </div>        
-      </div>
-    </div>
+    <AboutMeContainer theme={dark}>
+      <AboutMeWrapper>
+        <AboutMeImg src="/images/foto.jpg" alt="selfie de Raul Monteiro" />
+        <AboutMeInfo>
+          <AboutMeTitle>Sobre mim</AboutMeTitle>
+          <AboutMeLocation>Mogi Guaçu - SP, Brasil</AboutMeLocation>
+          <AboutMeDescription>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id
+            egestas dui. Nullam finibus aliquam enim quis faucibus. Aenean ac
+            commodo dolor, nec bibendum velit.
+          </AboutMeDescription>
+          <SocialMediaList>
+            {socialMediaArray.map((item) => {
+              <img src={item.icon} alt={item.alt} />;
+            })}
+          </SocialMediaList>
+        </AboutMeInfo>
+      </AboutMeWrapper>
+    </AboutMeContainer>
   );
-}
-
-export default AboutMe;
+};

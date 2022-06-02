@@ -1,47 +1,33 @@
-//import mrs from '/images/mrs.png';
-//import mrv from '/images/mrv.png';
-//import bb from '/images/banco-do-brasil.png';
-//import './Experiences.css';
+import { dark } from "../../themes/dark";
+import {
+  ExperiencesContainer,
+  ExperinceWrapper,
+  Display,
+  DisplayTitle,
+  ExperienceList,
+  ExperienceInfo,
+  ExperienceTitle,
+  ExperienceDate,
+  ExperienceEmployer,
+  ExperienceDescription,
+} from "./style.js";
 
-function ExperienceCard (props) {
+export const Experiences = () => {
   return (
-    <div className='experience-card'>
-      <img className='experience-card-img' src={props.img}></img>
-      <h2 className='experience-card-position'>{props.position}</h2>
-      <p className='experience-card-description'>{props.description}</p>
-      {props.principal == 'true' && <button className='experience-card-button'>&#11088; Emprego atual</button>}
-    </div>
-  )  
-}
+    <ExperiencesContainer theme={dark}>
+      <ExperinceWrapper>
+        <Display>
+          <DisplayTitle>Experiência</DisplayTitle>
+          <ExperienceList></ExperienceList>
+        </Display>
 
-function Experiences(props) {
-  return (
-    <div className='experiences'>
-      <div className='experiences-wrapper'>
-        <h2 className='experiences-title'>Experiências Profissionais</h2>
-        <div className='experiences-display'>
-          <ExperienceCard
-            img='/images/mrs.png'
-            position= 'Estagiário de Operação de Trens'
-            description= 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum '
-            principal= 'false'
-          />
-          <ExperienceCard
-            img='/images/mrv.png'
-            position= 'Estagiário de Obra'
-            description= 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum '
-            principal= 'false'
-          />
-          <ExperienceCard
-            img='/images/banco-do-brasil.png'
-            position= 'Agente Comercial'
-            description= 'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum '
-            principal= 'true'
-          />
-        </div>      
-      </div>
-    </div>
+        <ExperienceInfo>
+          <ExperienceTitle></ExperienceTitle>
+          <ExperienceDate></ExperienceDate>
+          <ExperienceEmployer></ExperienceEmployer>
+          <ExperienceDescription></ExperienceDescription>
+        </ExperienceInfo>
+      </ExperinceWrapper>
+    </ExperiencesContainer>
   );
-}
-
-export default Experiences;
+};
