@@ -5,7 +5,6 @@ import {
   MainInfo,
   MainDescription,
   MainTitle,
-  MainImg,
 } from "./style";
 
 export const Main = () => {
@@ -13,11 +12,12 @@ export const Main = () => {
     <MainContainer theme={dark}>
       <MainWrapper>
         <MainInfo>
-          <MainDescription>Olá, eu sou</MainDescription>
-          <MainTitle>Raul Monteiro</MainTitle>
-          <MainDescription>Desenvolvedor font-end</MainDescription>
+          <MainDescription theme={dark}>Olá, eu sou</MainDescription>
+          <MainTitle theme={dark}>Raul Monteiro</MainTitle>
+          <MainDescription theme={dark}>
+            Desenvolvedor front-end
+          </MainDescription>
         </MainInfo>
-        <MainImg />
       </MainWrapper>
     </MainContainer>
   );

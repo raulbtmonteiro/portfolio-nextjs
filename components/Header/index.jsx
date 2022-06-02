@@ -5,6 +5,7 @@ import {
   HeaderWrapper,
   HeaderTitle,
   HeaderNavBar,
+  NavBarItem,
 } from "./style";
 
 const navItens = [
@@ -29,14 +30,13 @@ const navItens = [
 export const Header = () => {
   return (
     <HeaderContainer theme={dark}>
-      <HeaderWrapper>
-        <HeaderTitle>Portfólio</HeaderTitle>
+      <HeaderWrapper theme={dark}>
+        <HeaderTitle theme={dark}>Portfólio</HeaderTitle>
         <HeaderNavBar>
-          {navItens.map((item) => {
-            <li>
-              <Link href={item.link}>{item.titulo}</Link>
-            </li>;
-          })}
+          <NavBarItem theme={dark}>Home</NavBarItem>
+          <NavBarItem theme={dark}>Sobre mim</NavBarItem>
+          <NavBarItem theme={dark}>Experiências</NavBarItem>
+          <NavBarItem theme={dark}>Projetos</NavBarItem>
         </HeaderNavBar>
       </HeaderWrapper>
     </HeaderContainer>

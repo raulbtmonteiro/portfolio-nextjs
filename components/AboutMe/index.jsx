@@ -41,11 +41,17 @@ export const AboutMe = () => {
   return (
     <AboutMeContainer theme={dark}>
       <AboutMeWrapper>
-        <AboutMeImg src="/images/foto.jpg" alt="selfie de Raul Monteiro" />
+        <AboutMeImg
+          theme={dark}
+          src="/images/foto.jpg"
+          alt="selfie de Raul Monteiro"
+        />
         <AboutMeInfo>
-          <AboutMeTitle>Sobre mim</AboutMeTitle>
-          <AboutMeLocation>Mogi Guaçu - SP, Brasil</AboutMeLocation>
-          <AboutMeDescription>
+          <AboutMeTitle theme={dark}>Sobre mim</AboutMeTitle>
+          <AboutMeLocation theme={dark}>
+            Mogi Guaçu - SP, Brasil
+          </AboutMeLocation>
+          <AboutMeDescription theme={dark}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id
             egestas dui. Nullam finibus aliquam enim quis faucibus. Aenean ac
             commodo dolor, nec bibendum velit.

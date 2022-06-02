@@ -8,8 +8,4 @@ export const dark = {
     backgroundDark: "#121212",
     backgroundDark200: "#151515",
   },
-
-  font: {
-    main: "'Inter', sans-serif;",
-  },
 };

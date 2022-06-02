@@ -4,15 +4,19 @@ import { AboutMe } from "../components/AboutMe";
 import { Experiences } from "../components/Experiences";
 import { Footer } from "../components/Footer";
 import { GlobalStyle } from "./globalStyle";
+import { Projects } from "../components/Projects";
 
 function Home() {
   return (
     <>
       <GlobalStyle />
       <Header />
-      <Main />
-      <AboutMe />
-
+      <main>
+        <Main />
+        <AboutMe />
+        <Experiences />
+        <Projects />
+      </main>
       <Footer />
     </>
   );
