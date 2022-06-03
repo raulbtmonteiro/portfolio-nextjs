@@ -1,7 +1,4 @@
-import Header from "../components/Header";
-import Education from "../components/Education";
-import Experiences from "../components/Experiences";
-import Footer from "../components/Footer";
+import { Header, Education, Experiences, Footer } from "../components";
 
 function Formacao() {
   return (
