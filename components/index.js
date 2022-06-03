@@ -4,4 +4,5 @@ export * from "./Education";
 export * from "./Experiences";
 export * from "./Header";
 export * from "./Footer";
-export * from "./Stacks";
+export * from "./Main";
+export * from "./Projects";
