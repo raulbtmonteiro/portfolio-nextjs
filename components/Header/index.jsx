@@ -33,6 +33,9 @@ export const Header = () => {
       <HeaderWrapper theme={dark}>
         <HeaderTitle theme={dark}>Portfólio</HeaderTitle>
         <HeaderNavBar>
+          {navItens.map((item) => {
+            <NavBarItem theme={dark}>{item.titulo}</NavBarItem>;
+          })}
           <NavBarItem theme={dark}>Home</NavBarItem>
           <NavBarItem theme={dark}>Sobre mim</NavBarItem>
           <NavBarItem theme={dark}>Experiências</NavBarItem>

@@ -19,47 +19,55 @@ export const Projects = () => {
         <ProjectsTitle theme={dark}>Projetos</ProjectsTitle>
         <ProjectsDisplay>
           <ProjectCard>
-            <CardImg />
+            <CardImg theme={dark} />
             <CardTitle theme={dark}>Nome do projeto</CardTitle>
             <CardDescription theme={dark}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
               blandit interdum odio eu varius.
             </CardDescription>
             <CardTecnologies theme={dark}>react</CardTecnologies>
-            <CardButton theme={dark}>Visualizar</CardButton>
+            <CardButton theme={dark}>
+              <img src="/images/link.svg" /> Visualizar
+            </CardButton>
           </ProjectCard>
 
           <ProjectCard>
-            <CardImg />
+            <CardImg theme={dark} />
             <CardTitle theme={dark}>Nome do projeto</CardTitle>
             <CardDescription theme={dark}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
               blandit interdum odio eu varius.
             </CardDescription>
             <CardTecnologies theme={dark}>react</CardTecnologies>
-            <CardButton theme={dark}>Visualizar</CardButton>
+            <CardButton theme={dark}>
+              <img src="/images/link.svg" /> Visualizar
+            </CardButton>
           </ProjectCard>
 
           <ProjectCard>
-            <CardImg />
+            <CardImg theme={dark} />
             <CardTitle theme={dark}>Nome do projeto</CardTitle>
             <CardDescription theme={dark}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
               blandit interdum odio eu varius.
             </CardDescription>
             <CardTecnologies theme={dark}>react</CardTecnologies>
-            <CardButton theme={dark}>Visualizar</CardButton>
+            <CardButton theme={dark}>
+              <img src="/images/link.svg" /> Visualizar
+            </CardButton>
           </ProjectCard>
 
           <ProjectCard>
-            <CardImg />
+            <CardImg theme={dark} />
             <CardTitle theme={dark}>Nome do projeto</CardTitle>
             <CardDescription theme={dark}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
               blandit interdum odio eu varius.
             </CardDescription>
             <CardTecnologies theme={dark}>react</CardTecnologies>
-            <CardButton theme={dark}>Visualizar</CardButton>
+            <CardButton theme={dark}>
+              <img src="/images/link.svg" /> Visualizar
+            </CardButton>
           </ProjectCard>
         </ProjectsDisplay>
       </ProjectsWrapper>
