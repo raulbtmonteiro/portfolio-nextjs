@@ -15,28 +15,28 @@ import {
 const projectsArray = [
   {
     img: "",
-    name: "Nome do projeto",
+    name: "Nome do projeto 1",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
     tecnologies: "react",
   },
   {
     img: "",
-    name: "Nome do projeto",
+    name: "Nome do projeto 2",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
     tecnologies: "react",
   },
   {
     img: "",
-    name: "Nome do projeto",
+    name: "Nome do projeto 3",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
     tecnologies: "react",
   },
   {
     img: "",
-    name: "Nome do projeto",
+    name: "Nome do projeto 4",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
     tecnologies: "react",
@@ -51,7 +51,7 @@ export const Projects = () => {
         <ProjectsDisplay>
           {projectsArray.map((item) => {
             return (
-              <ProjectCard>
+              <ProjectCard key={item.name}>
                 <CardImg theme={dark} />
                 <CardTitle theme={dark}>{item.name}</CardTitle>
                 <CardDescription theme={dark}>

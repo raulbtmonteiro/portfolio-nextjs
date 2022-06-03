@@ -48,7 +48,11 @@ export const Experiences = () => {
         <Display>
           <ExperienceList>
             {experiencesArray.map((item) => {
-              return <ListItem theme={dark}>{item.company}</ListItem>;
+              return (
+                <ListItem key={item.company} theme={dark}>
+                  {item.company}
+                </ListItem>
+              );
             })}
           </ExperienceList>
           <ExperienceInfo>

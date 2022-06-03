@@ -58,7 +58,7 @@ export const AboutMe = () => {
           <SocialMediaList>
             {socialMediaArray.map((item) => {
               return (
-                <a href={item.url} target="_blank">
+                <a href={item.url} key={item.name} target="_blank">
                   <img src={item.icon} alt={item.alt} />
                 </a>
               );

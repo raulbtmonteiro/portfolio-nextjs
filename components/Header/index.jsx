@@ -9,19 +9,19 @@ import {
 
 const navItens = [
   {
-    titulo: "Home",
+    title: "Home",
     link: "/",
   },
   {
-    titulo: "Sobre mim",
+    title: "Sobre mim",
     link: "/",
   },
   {
-    titulo: "Esperiências",
+    title: "Esperiências",
     link: "/",
   },
   {
-    titulo: "Projetos",
+    title: "Projetos",
     link: "/",
   },
 ];
@@ -33,7 +33,11 @@ export const Header = () => {
         <HeaderTitle theme={dark}>Portfólio</HeaderTitle>
         <HeaderNavBar theme={dark}>
           {navItens.map((item) => {
-            return <Link href={item.link}>{item.titulo}</Link>;
+            return (
+              <Link key={item.title} href={item.link}>
+                {item.title}
+              </Link>
+            );
           })}
         </HeaderNavBar>
       </HeaderWrapper>
