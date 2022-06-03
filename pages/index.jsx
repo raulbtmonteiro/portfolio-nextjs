@@ -6,7 +6,7 @@ import {
   Projects,
   Footer,
 } from "../components";
-import { GlobalStyle } from "./globalStyle";
+import { GlobalStyle } from "../themes/globalStyle";
 
 function Home() {
   return (
