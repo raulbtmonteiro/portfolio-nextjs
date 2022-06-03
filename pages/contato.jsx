@@ -1,10 +1,9 @@
-import { Header, Contact, Footer } from "../components";
+import { Header, Footer } from "../components";
 
 function Formacao() {
   return (
     <>
       <Header />
-      <Contact />
       <Footer />
     </>
   );
