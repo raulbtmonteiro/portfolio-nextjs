@@ -13,6 +13,33 @@ import {
   ExperienceDescription,
 } from "./style.js";
 
+const experiencesArray = [
+  {
+    position: "",
+    time: "",
+    company: "Digital House",
+    description: "",
+  },
+  {
+    position: "",
+    time: "",
+    company: "Código Fonte TV",
+    description: "",
+  },
+  {
+    position: "",
+    time: "",
+    company: "Zuplae",
+    description: "",
+  },
+  {
+    position: "",
+    time: "",
+    company: "ContWeb",
+    description: "",
+  },
+];
+
 export const Experiences = () => {
   return (
     <ExperienceContainer theme={dark}>
@@ -20,10 +47,9 @@ export const Experiences = () => {
         <DisplayTitle theme={dark}>Experiência</DisplayTitle>
         <Display>
           <ExperienceList>
-            <ListItem theme={dark}>Digital House</ListItem>
-            <ListItem theme={dark}>Código Fonte TV</ListItem>
-            <ListItem theme={dark}>Zuplae</ListItem>
-            <ListItem theme={dark}>ContWeb</ListItem>
+            {experiencesArray.map((item) => {
+              return <ListItem theme={dark}>{item.company}</ListItem>;
+            })}
           </ExperienceList>
           <ExperienceInfo>
             <ExperienceTitle theme={dark}>

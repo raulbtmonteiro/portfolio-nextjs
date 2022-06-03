@@ -3,7 +3,6 @@ import {
   AboutMeContainer,
   AboutMeWrapper,
   AboutMeImg,
-  AboutMeInfo,
   AboutMeTitle,
   AboutMeLocation,
   AboutMeDescription,
@@ -46,7 +45,7 @@ export const AboutMe = () => {
           src="/images/foto.jpg"
           alt="selfie de Raul Monteiro"
         />
-        <AboutMeInfo>
+        <div>
           <AboutMeTitle theme={dark}>Sobre mim</AboutMeTitle>
           <AboutMeLocation theme={dark}>
             Mogi Guaçu - SP, Brasil
@@ -58,10 +57,14 @@ export const AboutMe = () => {
           </AboutMeDescription>
           <SocialMediaList>
             {socialMediaArray.map((item) => {
-              <img src={item.icon} alt={item.alt} />;
+              return (
+                <a href={item.url} target="_blank">
+                  <img src={item.icon} alt={item.alt} />
+                </a>
+              );
             })}
           </SocialMediaList>
-        </AboutMeInfo>
+        </div>
       </AboutMeWrapper>
     </AboutMeContainer>
   );

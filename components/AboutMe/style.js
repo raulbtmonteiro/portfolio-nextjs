@@ -22,8 +22,6 @@ export const AboutMeImg = styled.img`
   border-radius: 4px 0px 0px 4px;
 `;
 
-export const AboutMeInfo = styled.div``;
-
 export const AboutMeTitle = styled.h2`
   font-weight: 600;
   font-size: 24px;
@@ -56,4 +54,17 @@ export const AboutMeDescription = styled.p`
   color: ${(props) => props.theme.colors.grayLight};
 `;
 
-export const SocialMediaList = styled.div``;
+export const SocialMediaList = styled.div`
+  display: flex;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+`;

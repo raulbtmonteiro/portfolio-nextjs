@@ -16,14 +16,22 @@ export const Main = () => {
         <MainTitle theme={dark}>Raul Monteiro</MainTitle>
         <MainDescription theme={dark}>Desenvolvedor front-end</MainDescription>
         <MainButtons>
-          <ButtonType theme={dark}>
+          <ButtonType
+            theme={dark}
+            borderColor1="#9358F7"
+            borderColor2="#10D7E2"
+          >
             <img
               src="/images/social_media/linkedin.svg"
               alt="logo do linkedin"
             />
             Linkedin
           </ButtonType>
-          <ButtonType theme={dark}>
+          <ButtonType
+            theme={dark}
+            borderColor1="#d24074"
+            borderColor2="#6518b4"
+          >
             <img src="/images/social_media/github.svg" alt="logo do GitHub" />
             GitHub
           </ButtonType>

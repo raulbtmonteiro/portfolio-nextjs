@@ -59,7 +59,7 @@ export const ButtonType = styled.button`
 
   background-color: transparent;
   border: 2px solid transparent;
-  border-image: linear-gradient(#d24074, #6518b4);
+  border-image: linear-gradient(#9358f7, #10d7e2);
   border-image-slice: 1;
   border-radius: 4px;
 

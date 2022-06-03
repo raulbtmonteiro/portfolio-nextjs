@@ -26,13 +26,14 @@ export const HeaderTitle = styled.h2`
 
 export const HeaderNavBar = styled.nav`
   display: flex;
-`;
 
-export const NavBarItem = styled.a`
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.2em;
+  a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2em;
+    text-decoration: none;
 
-  margin-left: 66px;
-  color: ${(props) => props.theme.colors.grayLight};
+    margin-left: 66px;
+    color: ${(props) => props.theme.colors.grayLight};
+  }
 `;

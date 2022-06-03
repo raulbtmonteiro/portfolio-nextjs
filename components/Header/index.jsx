@@ -5,7 +5,6 @@ import {
   HeaderWrapper,
   HeaderTitle,
   HeaderNavBar,
-  NavBarItem,
 } from "./style";
 
 const navItens = [
@@ -19,11 +18,11 @@ const navItens = [
   },
   {
     titulo: "Esperiências",
-    link: "/formacao",
+    link: "/",
   },
   {
     titulo: "Projetos",
-    link: "/projetos",
+    link: "/",
   },
 ];
 
@@ -32,14 +31,10 @@ export const Header = () => {
     <HeaderContainer theme={dark}>
       <HeaderWrapper theme={dark}>
         <HeaderTitle theme={dark}>Portfólio</HeaderTitle>
-        <HeaderNavBar>
+        <HeaderNavBar theme={dark}>
           {navItens.map((item) => {
-            <NavBarItem theme={dark}>{item.titulo}</NavBarItem>;
+            return <Link href={item.link}>{item.titulo}</Link>;
           })}
-          <NavBarItem theme={dark}>Home</NavBarItem>
-          <NavBarItem theme={dark}>Sobre mim</NavBarItem>
-          <NavBarItem theme={dark}>Experiências</NavBarItem>
-          <NavBarItem theme={dark}>Projetos</NavBarItem>
         </HeaderNavBar>
       </HeaderWrapper>
     </HeaderContainer>

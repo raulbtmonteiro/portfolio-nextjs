@@ -12,63 +12,60 @@ import {
   CardButton,
 } from "./style";
 
+const projectsArray = [
+  {
+    img: "",
+    name: "Nome do projeto",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
+    tecnologies: "react",
+  },
+  {
+    img: "",
+    name: "Nome do projeto",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
+    tecnologies: "react",
+  },
+  {
+    img: "",
+    name: "Nome do projeto",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
+    tecnologies: "react",
+  },
+  {
+    img: "",
+    name: "Nome do projeto",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
+    tecnologies: "react",
+  },
+];
+
 export const Projects = () => {
   return (
     <ProjectsContainer theme={dark}>
       <ProjectsWrapper>
         <ProjectsTitle theme={dark}>Projetos</ProjectsTitle>
         <ProjectsDisplay>
-          <ProjectCard>
-            <CardImg theme={dark} />
-            <CardTitle theme={dark}>Nome do projeto</CardTitle>
-            <CardDescription theme={dark}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              blandit interdum odio eu varius.
-            </CardDescription>
-            <CardTecnologies theme={dark}>react</CardTecnologies>
-            <CardButton theme={dark}>
-              <img src="/images/link.svg" /> Visualizar
-            </CardButton>
-          </ProjectCard>
-
-          <ProjectCard>
-            <CardImg theme={dark} />
-            <CardTitle theme={dark}>Nome do projeto</CardTitle>
-            <CardDescription theme={dark}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              blandit interdum odio eu varius.
-            </CardDescription>
-            <CardTecnologies theme={dark}>react</CardTecnologies>
-            <CardButton theme={dark}>
-              <img src="/images/link.svg" /> Visualizar
-            </CardButton>
-          </ProjectCard>
-
-          <ProjectCard>
-            <CardImg theme={dark} />
-            <CardTitle theme={dark}>Nome do projeto</CardTitle>
-            <CardDescription theme={dark}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              blandit interdum odio eu varius.
-            </CardDescription>
-            <CardTecnologies theme={dark}>react</CardTecnologies>
-            <CardButton theme={dark}>
-              <img src="/images/link.svg" /> Visualizar
-            </CardButton>
-          </ProjectCard>
-
-          <ProjectCard>
-            <CardImg theme={dark} />
-            <CardTitle theme={dark}>Nome do projeto</CardTitle>
-            <CardDescription theme={dark}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              blandit interdum odio eu varius.
-            </CardDescription>
-            <CardTecnologies theme={dark}>react</CardTecnologies>
-            <CardButton theme={dark}>
-              <img src="/images/link.svg" /> Visualizar
-            </CardButton>
-          </ProjectCard>
+          {projectsArray.map((item) => {
+            return (
+              <ProjectCard>
+                <CardImg theme={dark} />
+                <CardTitle theme={dark}>{item.name}</CardTitle>
+                <CardDescription theme={dark}>
+                  {item.description}
+                </CardDescription>
+                <CardTecnologies theme={dark}>
+                  {item.tecnologies}
+                </CardTecnologies>
+                <CardButton theme={dark}>
+                  <img src="/images/link.svg" /> Visualizar
+                </CardButton>
+              </ProjectCard>
+            );
+          })}
         </ProjectsDisplay>
       </ProjectsWrapper>
     </ProjectsContainer>
