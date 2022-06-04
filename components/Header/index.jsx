@@ -1,10 +1,14 @@
 import Link from "next/link";
+import { useState } from "react";
 import { dark } from "../../themes/dark";
 import {
   HeaderContainer,
   HeaderWrapper,
   HeaderTitle,
   HeaderNavBar,
+  CloseButton,
+  XDirection,
+  YDirection,
   HamburgerMenu,
 } from "./style";
 
@@ -28,11 +32,20 @@ const navItens = [
 ];
 
 export const Header = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
     <HeaderContainer theme={dark}>
       <HeaderWrapper theme={dark}>
         <HeaderTitle theme={dark}>Portfólio</HeaderTitle>
-        <HeaderNavBar theme={dark}>
+        <HeaderNavBar theme={dark} isVisible={isVisible}>
+          <CloseButton
+            isVisible={isVisible}
+            onClick={() => setIsVisible(!isVisible)}
+          >
+            <XDirection theme={dark} />
+            <YDirection theme={dark} />
+          </CloseButton>
           {navItens.map((item) => {
             return (
               <Link key={item.title} href={item.link}>
@@ -41,7 +54,7 @@ export const Header = () => {
             );
           })}
         </HeaderNavBar>
-        <HamburgerMenu theme={dark}>
+        <HamburgerMenu theme={dark} onClick={() => setIsVisible(!isVisible)}>
           <div />
           <div />
           <div />

@@ -50,19 +50,33 @@ export const HeaderNavBar = styled.nav`
   }
 
   @media screen and (max-width: 720px) {
-    display: none;
-    ${({ visibility }) =>
-      visibility &&
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(50px);
+
+    a {
+      margin-left: 0;
+    }
+
+    ${({ isVisible }) =>
+      isVisible &&
       css`
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
         position: absolute;
-        top: 36px;
-        right: 24px;
-        width: 8em;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
         z-index: 4;
-        background-color: white;
-        border-radius: 15px;
+        background-color: ${(props) => props.theme.colors.backgroundDark200};
+        transform: translateY(0);
+        opacity: 1;
       `}
   }
 `;
@@ -82,4 +96,38 @@ export const HamburgerMenu = styled.div`
       background-color: ${(props) => props.theme.colors.light};
     }
   }
+`;
+
+export const CloseButton = styled.div`
+  display: none;
+
+  @media screen and (max-width: 720px) {
+    ${({ isVisible }) =>
+      isVisible &&
+      css`
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        right: 60px;
+      `}
+  }
+`;
+
+export const XDirection = styled.div`
+  width: 30px;
+  height: 2px;
+  background-color: ${(props) => props.theme.colors.light};
+  transform: rotate(45deg);
+  transition: 500ms;
+`;
+
+export const YDirection = styled.div`
+  width: 30px;
+  height: 2px;
+  position: relative;
+  top: -2px;
+  background-color: ${(props) => props.theme.colors.light};
+  transform: rotate(-45deg);
+  transition: 500ms;
 `;
