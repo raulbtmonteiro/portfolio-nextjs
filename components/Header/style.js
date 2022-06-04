@@ -54,6 +54,21 @@ export const HeaderNavBar = styled.nav`
     transition: 0.5s;
     transform: translateY(50px);
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+    background-color: ${(props) => props.theme.colors.backgroundDark200};
+
     a {
       margin-left: 0;
     }
@@ -61,20 +76,6 @@ export const HeaderNavBar = styled.nav`
     ${({ isVisible }) =>
       isVisible &&
       css`
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        position: absolute;
-        height: 100vh;
-        width: 100vw;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: 4;
-        background-color: ${(props) => props.theme.colors.backgroundDark200};
         transform: translateY(0);
         opacity: 1;
       `}
