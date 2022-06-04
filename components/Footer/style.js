@@ -12,6 +12,14 @@ export const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 1170px) {
+    padding: 0 24px;
+  }
+
+  @media screen and (max-width: 720px) {
+    height: 70px;
+  }
 `;
 
 export const Copyright = styled.p`
@@ -20,6 +28,10 @@ export const Copyright = styled.p`
   line-height: 1.2em;
 
   color: ${(props) => props.theme.colors.grayLight};
+
+  @media screen and (max-width: 720px) {
+    font-size: 14px;
+  }
 `;
 
 export const LogoContainer = styled.div`

@@ -17,7 +17,7 @@ const navItens = [
     link: "/",
   },
   {
-    title: "Esperiências",
+    title: "Experiências",
     link: "/",
   },
   {

@@ -5,6 +5,10 @@ export const MainContainer = styled.section`
   background-image: url("/images/LooperBG.svg");
   background-repeat: no-repeat;
   background-position: right;
+
+  @media screen and (max-width: 720px) {
+    background-image: none;
+  }
 `;
 
 export const MainWrapper = styled.div`
@@ -16,6 +20,14 @@ export const MainWrapper = styled.div`
   grid-template-columns: 100%;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 1170px) {
+    padding: 152px 24px 200px 24px;
+  }
+
+  @media screen and (max-width: 720px) {
+    padding: 50px 24px 55px 24px;
+  }
 `;
 
 export const MainDescription = styled.p`
@@ -26,6 +38,11 @@ export const MainDescription = styled.p`
 
   margin-bottom: 0.5em;
   color: ${(props) => props.theme.colors.light};
+
+  @media screen and (max-width: 720px) {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
 `;
 
 export const MainTitle = styled.h1`
@@ -36,6 +53,10 @@ export const MainTitle = styled.h1`
 
   margin-bottom: 0.2em;
   color: ${(props) => props.theme.colors.blue};
+
+  @media screen and (max-width: 720px) {
+    font-size: 32px;
+  }
 `;
 
 export const MainButtons = styled.div`
@@ -64,6 +85,10 @@ export const ButtonType = styled.button`
   border-radius: 4px;
 
   img {
-    margin-right: 1em;
+    margin-right: 16px;
+  }
+
+  @media screen and (max-width: 720px) {
+    font-size: 14.2px;
   }
 `;

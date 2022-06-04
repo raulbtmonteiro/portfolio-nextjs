@@ -8,6 +8,14 @@ export const ProjectsWrapper = styled.div`
   max-width: 1170px;
   padding: 100px 0 40px;
   margin: 0 auto;
+
+  @media screen and (max-width: 1170px) {
+    padding: 100px 24px 40px;
+  }
+
+  @media screen and (max-width: 720px) {
+    padding: 40px 24px;
+  }
 `;
 
 export const ProjectsTitle = styled.h2`
@@ -18,15 +26,32 @@ export const ProjectsTitle = styled.h2`
   text-transform: uppercase;
   margin-bottom: 2.5em;
   color: ${(props) => props.theme.colors.light};
+
+  @media screen and (max-width: 1170px) {
+    margin-bottom: 1em;
+  }
 `;
 
 export const ProjectsDisplay = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
+  @media screen and (max-width: 1170px) {
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 720px) {
+    gap: 40px;
+  }
 `;
 
-export const ProjectCard = styled.div``;
+export const ProjectCard = styled.div`
+  @media screen and (max-width: 720px) {
+    width: 312px;
+    max-width: 100%;
+  }
+`;
 
 export const CardImg = styled.img`
   width: 530px;
@@ -35,6 +60,12 @@ export const CardImg = styled.img`
 
   border-left: 4px ${(props) => props.theme.colors.blue} solid;
   border-radius: 4px 0px 0px 4px;
+
+  @media screen and (max-width: 720px) {
+    max-width: 100%;
+    max-height: 130px;
+    margin-bottom: 24px;
+  }
 `;
 
 export const CardTitle = styled.h3`
@@ -45,6 +76,11 @@ export const CardTitle = styled.h3`
 
   margin-bottom: 1.25em;
   color: ${(props) => props.theme.colors.light};
+
+  @media screen and (max-width: 720px) {
+    font-size: 16px;
+    margin-bottom: 1em;
+  }
 `;
 
 export const CardDescription = styled.p`
@@ -55,6 +91,12 @@ export const CardDescription = styled.p`
   max-width: 438px;
   margin-bottom: 1.625em;
   color: ${(props) => props.theme.colors.grayLight};
+
+  @media screen and (max-width: 720px) {
+    font-size: 14px;
+    line-height: 1.29em;
+    margin-bottom: 0.6em;
+  }
 `;
 
 export const CardTecnologies = styled.p`
@@ -84,7 +126,14 @@ export const CardButton = styled.button`
   border: 2px transparent solid;
   border-image: linear-gradient(#9358f7, #10d7e2);
   border-image-slice: 1;
+
   img {
     margin-right: 1em;
+  }
+
+  @media screen and (max-width: 720px) {
+    font-size: 12.8px;
+    width: 100%;
+    margin-bottom: 0;
   }
 `;
