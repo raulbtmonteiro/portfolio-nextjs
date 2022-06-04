@@ -108,7 +108,7 @@ export const CardTecnologies = styled.p`
   color: ${(props) => props.theme.colors.blue};
 `;
 
-export const CardButton = styled.button`
+export const CardButton = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,6 +121,7 @@ export const CardButton = styled.button`
   height: 2.8em;
   margin-bottom: 3.75em;
   color: ${(props) => props.theme.colors.light};
+  text-decoration: none;
 
   background-color: transparent;
   border: 2px transparent solid;

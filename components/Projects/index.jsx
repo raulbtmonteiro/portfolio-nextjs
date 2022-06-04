@@ -15,31 +15,35 @@ import {
 const projectsArray = [
   {
     img: "",
-    name: "Nome do projeto 1",
+    name: "Christmas",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
-    tecnologies: "react",
+    tecnologies: "JavaScript React styled-components",
+    link: "https://github.com/raulbtmonteiro/react-christmas",
   },
   {
     img: "",
-    name: "Nome do projeto 2",
+    name: "Rachi",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
-    tecnologies: "react",
+    tecnologies: "JavaScript CSS React",
+    link: "https://github.com/raulbtmonteiro/react-rachi",
   },
   {
     img: "",
-    name: "Nome do projeto 3",
+    name: "Busca CEP",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
-    tecnologies: "react",
+    tecnologies: "React",
+    link: "",
   },
   {
     img: "",
-    name: "Nome do projeto 4",
+    name: "Tip calculator app",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
-    tecnologies: "react",
+    tecnologies: "HTML CSS JavaScript",
+    link: "https://tip-calculator-app-tau-seven.vercel.app/",
   },
 ];
 
@@ -60,7 +64,7 @@ export const Projects = () => {
                 <CardTecnologies theme={dark}>
                   {item.tecnologies}
                 </CardTecnologies>
-                <CardButton theme={dark}>
+                <CardButton theme={dark} target="_blank" href={item.link}>
                   <img src="/images/link.svg" /> Visualizar
                 </CardButton>
               </ProjectCard>

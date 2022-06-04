@@ -72,7 +72,7 @@ export const AboutMe = () => {
               imgSrc="/images/download-cloud.svg"
               imgAlt="Download da nuvem"
               theme={dark}
-              link="/curriculo.pdf"
+              link="https://portfolio-nextjs-ecru-three.vercel.app/curriculo.pdf"
               download
             />
             <StyledButton
