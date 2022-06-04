@@ -1,12 +1,15 @@
-import { dark } from "../../themes/dark";
-import { ButtonType2 } from "./style";
+import { ButtonType } from "./style";
 
-function StyledButton() {
+function StyledButton(props) {
   return (
-    <ButtonType2 theme={dark} borderColor1="#9358F7" borderColor2="#10D7E2">
-      <img src="/images/social_media/linkedin.svg" alt="logo do linkedin" />
-      Linkedin
-    </ButtonType2>
+    <ButtonType
+      theme={props.theme}
+      borderColor1="#9358F7"
+      borderColor2="#10D7E2"
+    >
+      <img src={props.imgSrc} alt={props.imgAlt} />
+      {props.title}
+    </ButtonType>
   );
 }
 

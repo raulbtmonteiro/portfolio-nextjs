@@ -84,6 +84,7 @@ export const AboutMeDescription = styled.p`
 
 export const SocialMediaList = styled.div`
   display: flex;
+  margin-bottom: 40px;
 
   a {
     display: flex;
@@ -95,4 +96,9 @@ export const SocialMediaList = styled.div`
     border-radius: 50%;
     margin-right: 20px;
   }
+`;
+
+export const AboutMeButtons = styled.div`
+  display: flex;
+  gap: 24px;
 `;

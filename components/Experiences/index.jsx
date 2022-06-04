@@ -5,6 +5,7 @@ import {
   Display,
   DisplayTitle,
   ExperienceList,
+  ExperienceCarousel,
   ListItem,
   ExperienceInfo,
   ExperienceTitle,
@@ -12,35 +13,60 @@ import {
   ExperienceEmployer,
   ExperienceDescription,
 } from "./style.js";
+import Carousel from "react-material-ui-carousel";
+import { useState } from "react";
 
 const experiencesArray = [
   {
-    position: "",
-    time: "",
-    company: "Digital House",
-    description: "",
+    position: "Desenvolvedor Front-End",
+    time: "Abr/2022 - Atual",
+    company: "Freelancer",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna.",
   },
   {
-    position: "",
-    time: "",
-    company: "Código Fonte TV",
-    description: "",
+    position: "Agente Comercial",
+    time: "Fev/2022 - Atual",
+    company: "Banco do Brasil",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna.",
   },
   {
-    position: "",
-    time: "",
-    company: "Zuplae",
-    description: "",
+    position: "Estagiário de Obras",
+    time: "Fev/2021 - Dez/2021",
+    company: "MRV Engenharia",
+    description: "Descrição",
   },
   {
-    position: "",
-    time: "",
-    company: "ContWeb",
-    description: "",
+    position: "Estagiário de Operação de Trens",
+    time: "Jun/2019 - Abr/2020",
+    company: "MRS Logística",
+    description: "Descrição",
+  },
+  {
+    position: "Diretor-Presidente",
+    time: "Mai/2017 - Ago/2019",
+    company: "Ideal Consultoria",
+    description: "Descrição",
   },
 ];
 
 export const Experiences = () => {
+  const [experienceShow, setExperienceShow] = useState(experiencesArray[0]);
+  const [isSelected, setIsSelected] = useState(false);
+
+  const HandleChange = (e) => {
+    const arraySize = experiencesArray.length;
+    for (var i = 0; i < arraySize; i++) {
+      if (e.target.innerText === experiencesArray[i].company) {
+        setExperienceShow(experiencesArray[i]);
+        setIsSelected(true);
+      } else {
+        setIsSelected(false);
+      }
+    }
+  };
+
   return (
     <ExperienceContainer theme={dark}>
       <ExperienceWrapper>
@@ -49,23 +75,44 @@ export const Experiences = () => {
           <ExperienceList>
             {experiencesArray.map((item) => {
               return (
-                <ListItem key={item.company} theme={dark}>
+                <ListItem
+                  key={item.company}
+                  theme={dark}
+                  isSelected={isSelected}
+                  onClick={(e) => HandleChange(e)}
+                >
                   {item.company}
                 </ListItem>
               );
             })}
           </ExperienceList>
+          <ExperienceCarousel>
+            <Carousel
+              autoPlay={false}
+              indicators={false}
+              navButtonsAlwaysInvisible={true}
+              animation="slide"
+              height="55px"
+            >
+              {experiencesArray.map((item) => {
+                return (
+                  <ListItem key={item.company} theme={dark}>
+                    {item.company}
+                  </ListItem>
+                );
+              })}
+            </Carousel>
+          </ExperienceCarousel>
           <ExperienceInfo>
             <ExperienceTitle theme={dark}>
-              Professor conteudista em Frontend
+              {experienceShow.position}
             </ExperienceTitle>
-            <ExperienceDate theme={dark}>Nov 2021 - Atual</ExperienceDate>
-            <ExperienceEmployer theme={dark}>Digital House</ExperienceEmployer>
+            <ExperienceDate theme={dark}>{experienceShow.time}</ExperienceDate>
+            <ExperienceEmployer theme={dark}>
+              {experienceShow.company}
+            </ExperienceEmployer>
             <ExperienceDescription theme={dark}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-              eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at
-              mattis metus. Nullam sit amet mauris condimentum, volutpat augue
-              in, mattis urna.
+              {experienceShow.description}
             </ExperienceDescription>
           </ExperienceInfo>
         </Display>

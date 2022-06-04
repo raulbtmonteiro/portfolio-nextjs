@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const ExperienceContainer = styled.section`
   background-color: ${(props) => props.theme.colors.backgroundDark};
@@ -42,6 +42,13 @@ export const Display = styled.div`
 
 export const ExperienceList = styled.ul`
   @media screen and (max-width: 720px) {
+    display: none;
+  }
+`;
+
+export const ExperienceCarousel = styled.ul`
+  display: none;
+  @media screen and (max-width: 720px) {
     display: flex;
   }
 `;
@@ -57,6 +64,14 @@ export const ListItem = styled.li`
   border-left: 2px solid ${(props) => props.theme.colors.backgroundDark200};
 
   color: ${(props) => props.theme.colors.grayLight};
+
+  cursor: pointer;
+
+  ${({ isSelected }) =>
+    isSelected &&
+    css`
+      border-left: 2px solid ${(props) => props.theme.colors.blue};
+    `}
 
   @media screen and (max-width: 720px) {
     border-left: none;

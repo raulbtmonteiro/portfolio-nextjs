@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ButtonType2 = styled.button`
+export const ButtonType = styled.button`
   font-weight: 600;
   font-size: 16px;
   line-height: 1.2em;
@@ -21,5 +21,9 @@ export const ButtonType2 = styled.button`
 
   img {
     margin-right: 1em;
+  }
+
+  @media screen and (max-width: 720px) {
+    font-size: 14.2px;
   }
 `;

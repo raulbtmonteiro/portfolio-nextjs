@@ -7,7 +7,9 @@ import {
   AboutMeLocation,
   AboutMeDescription,
   SocialMediaList,
+  AboutMeButtons,
 } from "./style";
+import StyledButton from "../StyledButton";
 
 const socialMediaArray = [
   {
@@ -64,6 +66,20 @@ export const AboutMe = () => {
               );
             })}
           </SocialMediaList>
+          <AboutMeButtons>
+            <StyledButton
+              title="Currículo"
+              imgSrc="/images/download-cloud.svg"
+              imgAlt="Download da nuvem"
+              theme={dark}
+            />
+            <StyledButton
+              title="E-mail"
+              imgSrc="/images/mail.svg"
+              imgAlt="Carta de correio"
+              theme={dark}
+            />
+          </AboutMeButtons>
         </div>
       </AboutMeWrapper>
     </AboutMeContainer>
