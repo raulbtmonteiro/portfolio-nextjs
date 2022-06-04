@@ -59,14 +59,14 @@ export const HeaderNavBar = styled.nav`
     justify-content: center;
     align-items: center;
     gap: 20px;
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 100vw;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 4;
+    z-index: -1;
     background-color: ${(props) => props.theme.colors.backgroundDark200};
 
     a {
@@ -78,6 +78,7 @@ export const HeaderNavBar = styled.nav`
       css`
         transform: translateY(0);
         opacity: 1;
+        z-index: 4;
       `}
   }
 `;

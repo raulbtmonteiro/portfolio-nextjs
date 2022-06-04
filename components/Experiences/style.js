@@ -42,16 +42,14 @@ export const Display = styled.div`
 
 export const ExperienceList = styled.ul`
   @media screen and (max-width: 720px) {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 55px;
   }
 `;
 
-export const ExperienceCarousel = styled.ul`
-  display: none;
-  @media screen and (max-width: 720px) {
-    display: flex;
-  }
-`;
+export const ExperienceCarousel = styled.ul``;
 
 export const ListItem = styled.li`
   list-style-type: none;
@@ -80,7 +78,6 @@ export const ListItem = styled.li`
     padding-left: 0;
     margin: 0 auto;
     justify-content: center;
-    flex-wrap: wrap;
   }
 `;
 
@@ -117,8 +114,8 @@ export const ExperienceDate = styled.p`
   color: ${(props) => props.theme.colors.light};
 
   @media screen and (max-width: 920px) {
-    top: 48px;
-    right: 118px;
+    top: 50px;
+    right: 0;
   }
 
   @media screen and (max-width: 720px) {

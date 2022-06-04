@@ -51,6 +51,28 @@ const experiencesArray = [
   },
 ];
 
+function FuncaoCarousel() {
+  return (
+    <ExperienceCarousel>
+      <Carousel
+        autoPlay={false}
+        indicators={false}
+        navButtonsAlwaysInvisible={true}
+        animation="slide"
+        height="55px"
+      >
+        {experiencesArray.map((item) => {
+          return (
+            <ListItem key={item.company} theme={dark}>
+              {item.company}
+            </ListItem>
+          );
+        })}
+      </Carousel>
+    </ExperienceCarousel>
+  );
+}
+
 export const Experiences = () => {
   const [experienceShow, setExperienceShow] = useState(experiencesArray[0]);
   const [isSelected, setIsSelected] = useState(false);
@@ -86,23 +108,6 @@ export const Experiences = () => {
               );
             })}
           </ExperienceList>
-          <ExperienceCarousel>
-            <Carousel
-              autoPlay={false}
-              indicators={false}
-              navButtonsAlwaysInvisible={true}
-              animation="slide"
-              height="55px"
-            >
-              {experiencesArray.map((item) => {
-                return (
-                  <ListItem key={item.company} theme={dark}>
-                    {item.company}
-                  </ListItem>
-                );
-              })}
-            </Carousel>
-          </ExperienceCarousel>
           <ExperienceInfo>
             <ExperienceTitle theme={dark}>
               {experienceShow.position}
