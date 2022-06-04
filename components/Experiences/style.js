@@ -86,6 +86,9 @@ export const ExperienceTitle = styled.h3`
     font-size: 16px;
     margin: 2.5em 0 1em;
   }
+  @media screen and (max-width: 420px) {
+    display: block;
+  }
 `;
 
 export const ExperienceDate = styled.p`
