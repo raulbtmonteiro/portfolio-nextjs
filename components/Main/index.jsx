@@ -21,12 +21,14 @@ export const Main = () => {
             imgSrc="/images/social_media/linkedin.svg"
             imgAlt="Logo do Linkedin"
             theme={dark}
+            link="https://www.linkedin.com/in/monteiroraul/"
           />
           <StyledButton
             title="GitHub"
             imgSrc="/images/social_media/github.svg"
             imgAlt="Logo do GitHub"
             theme={dark}
+            link="https://github.com/raulbtmonteiro"
           />
         </MainButtons>
       </MainWrapper>

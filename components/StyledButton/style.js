@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
-export const ButtonType = styled.button`
+export const ButtonType = styled.a`
   font-weight: 600;
   font-size: 16px;
   line-height: 1.2em;
   color: ${(props) => props.theme.colors.light};
+  text-decoration: none;
 
   height: 2.8em;
   width: 10em;

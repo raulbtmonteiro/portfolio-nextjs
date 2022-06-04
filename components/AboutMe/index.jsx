@@ -72,12 +72,15 @@ export const AboutMe = () => {
               imgSrc="/images/download-cloud.svg"
               imgAlt="Download da nuvem"
               theme={dark}
+              link="/curriculo.pdf"
+              download
             />
             <StyledButton
               title="E-mail"
               imgSrc="/images/mail.svg"
               imgAlt="Carta de correio"
               theme={dark}
+              link="mailto:raulbtmonteiro@gmail.com"
             />
           </AboutMeButtons>
         </div>

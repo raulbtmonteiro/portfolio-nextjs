@@ -6,6 +6,9 @@ function StyledButton(props) {
       theme={props.theme}
       borderColor1="#9358F7"
       borderColor2="#10D7E2"
+      href={props.link}
+      target="_blank"
+      download={props.download}
     >
       <img src={props.imgSrc} alt={props.imgAlt} />
       {props.title}
