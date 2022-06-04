@@ -5,6 +5,7 @@ import {
   HeaderWrapper,
   HeaderTitle,
   HeaderNavBar,
+  HamburgerMenu,
 } from "./style";
 
 const navItens = [
@@ -40,6 +41,11 @@ export const Header = () => {
             );
           })}
         </HeaderNavBar>
+        <HamburgerMenu theme={dark}>
+          <div />
+          <div />
+          <div />
+        </HamburgerMenu>
       </HeaderWrapper>
     </HeaderContainer>
   );

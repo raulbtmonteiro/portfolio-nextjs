@@ -66,3 +66,20 @@ export const HeaderNavBar = styled.nav`
       `}
   }
 `;
+
+export const HamburgerMenu = styled.div`
+  display: none;
+
+  @media screen and (max-width: 720px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.05px;
+
+    div {
+      width: 28px;
+      height: 1.4px;
+      background-color: ${(props) => props.theme.colors.light};
+    }
+  }
+`;

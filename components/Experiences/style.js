@@ -7,15 +7,18 @@ export const ExperienceContainer = styled.section`
 export const ExperienceWrapper = styled.div`
   max-width: 1170px;
   margin: 0 auto;
-  padding: 100px 0 100px;
+  padding: 100px 0;
 
   display: flex;
   flex-direction: column;
-`;
 
-export const Display = styled.div`
-  display: grid;
-  grid-template-columns: 24% 76%;
+  @media screen and (max-width: 1170px) {
+    padding: 100px 24px;
+  }
+
+  @media screen and (max-width: 1170px) {
+    padding: 40px 24px;
+  }
 `;
 
 export const DisplayTitle = styled.h2`
@@ -28,7 +31,20 @@ export const DisplayTitle = styled.h2`
   color: ${(props) => props.theme.colors.light};
 `;
 
-export const ExperienceList = styled.ul``;
+export const Display = styled.div`
+  display: grid;
+  grid-template-columns: 24% 76%;
+
+  @media screen and (max-width: 720px) {
+    grid-template-columns: 100%;
+  }
+`;
+
+export const ExperienceList = styled.ul`
+  @media screen and (max-width: 720px) {
+    display: flex;
+  }
+`;
 
 export const ListItem = styled.li`
   list-style-type: none;
@@ -41,6 +57,16 @@ export const ListItem = styled.li`
   border-left: 2px solid ${(props) => props.theme.colors.backgroundDark200};
 
   color: ${(props) => props.theme.colors.grayLight};
+
+  @media screen and (max-width: 720px) {
+    border-left: none;
+    border-bottom: 2px solid ${(props) => props.theme.colors.backgroundDark200};
+    width: 144px;
+    padding-left: 0;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 `;
 
 export const ExperienceInfo = styled.div`
@@ -55,6 +81,11 @@ export const ExperienceTitle = styled.h3`
   display: inline-block;
   margin-bottom: 1.08em;
   color: ${(props) => props.theme.colors.light};
+
+  @media screen and (max-width: 720px) {
+    font-size: 16px;
+    margin: 2.5em 0 1em;
+  }
 `;
 
 export const ExperienceDate = styled.p`
@@ -66,6 +97,23 @@ export const ExperienceDate = styled.p`
   position: relative;
   right: -142.84px;
   color: ${(props) => props.theme.colors.light};
+
+  @media screen and (max-width: 920px) {
+    top: 48px;
+    right: 118px;
+  }
+
+  @media screen and (max-width: 720px) {
+    font-size: 12px;
+    top: 36px;
+    right: 50px;
+  }
+
+  @media screen and (max-width: 420px) {
+    top: 0;
+    right: 0;
+    margin-bottom: 10px;
+  }
 `;
 
 export const ExperienceEmployer = styled.p`
@@ -75,6 +123,12 @@ export const ExperienceEmployer = styled.p`
 
   margin-bottom: 1.625em;
   color: ${(props) => props.theme.colors.blue};
+
+  @media screen and (max-width: 720px) {
+    font-size: 14px;
+    line-height: 1.7em;
+    margin-bottom: 1.14em;
+  }
 `;
 
 export const ExperienceDescription = styled.p`
@@ -83,4 +137,9 @@ export const ExperienceDescription = styled.p`
   line-height: 1.56em;
 
   color: ${(props) => props.theme.colors.grayLight};
+
+  @media screen and (max-width: 720px) {
+    font-size: 14px;
+    line-height: 1.7em;
+  }
 `;
