@@ -75,14 +75,15 @@ function FuncaoCarousel() {
 
 export const Experiences = () => {
   const [experienceShow, setExperienceShow] = useState(experiencesArray[0]);
-  const [isSelected, setIsSelected] = useState(false);
 
   const HandleChange = (e) => {
     const arraySize = experiencesArray.length;
+    const list = e.target.parentNode;
     for (var i = 0; i < arraySize; i++) {
+      list.children[i].id = "";
       if (e.target.innerText === experiencesArray[i].company) {
         setExperienceShow(experiencesArray[i]);
-        setIsSelected(true);
+        e.target.id = "selectedButton";
       }
     }
   };
@@ -98,7 +99,6 @@ export const Experiences = () => {
                 <ListItem
                   key={item.company}
                   theme={dark}
-                  isSelected={isSelected}
                   onClick={(e) => HandleChange(e)}
                 >
                   {item.company}

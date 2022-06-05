@@ -65,12 +65,6 @@ export const ListItem = styled.li`
 
   cursor: pointer;
 
-  ${({ isSelected }) =>
-    isSelected &&
-    css`
-      border-left: 2px solid ${(props) => props.theme.colors.blue};
-    `}
-
   @media screen and (max-width: 720px) {
     border-left: none;
     border-bottom: 2px solid ${(props) => props.theme.colors.backgroundDark200};

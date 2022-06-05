@@ -14,7 +14,7 @@ import {
 
 const projectsArray = [
   {
-    img: "",
+    img: "/images/projects/christmas.jpg",
     name: "Christmas",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
@@ -22,7 +22,7 @@ const projectsArray = [
     link: "https://github.com/raulbtmonteiro/react-christmas",
   },
   {
-    img: "",
+    img: "/images/projects/rachi.jpg",
     name: "Rachi",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
@@ -30,7 +30,7 @@ const projectsArray = [
     link: "https://github.com/raulbtmonteiro/react-rachi",
   },
   {
-    img: "",
+    img: "/images/projects/rachi.jpg",
     name: "Busca CEP",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
@@ -38,7 +38,7 @@ const projectsArray = [
     link: "",
   },
   {
-    img: "",
+    img: "/images/projects/tip-calculator-app.jpg",
     name: "Tip calculator app",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
@@ -56,7 +56,7 @@ export const Projects = () => {
           {projectsArray.map((item) => {
             return (
               <ProjectCard key={item.name}>
-                <CardImg theme={dark} />
+                <CardImg theme={dark} src={item.img} />
                 <CardTitle theme={dark}>{item.name}</CardTitle>
                 <CardDescription theme={dark}>
                   {item.description}

@@ -1,0 +1,10 @@
+#selectedButton {
+  border-left: 2px solid #00d2df;
+}
+
+@media screen and (max-width: 720px) {
+  #selectedButton {
+    border-left: none;
+    border-bottom: 2px solid #00d2df;
+  }
+}
