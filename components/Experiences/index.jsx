@@ -94,13 +94,14 @@ export const Experiences = () => {
             })}
           </ExperienceList>
           <ScrollingMenu>
-            <HorizontalScroll>
+            <HorizontalScroll id="container">
               {experiencesArray.map((item) => {
                 return (
                   <ListItem
                     key={item.company}
                     theme={dark}
                     onClick={(e) => HandleChange(e)}
+                    id="component"
                   >
                     {item.company}
                   </ListItem>

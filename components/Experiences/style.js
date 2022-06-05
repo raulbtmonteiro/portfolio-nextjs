@@ -42,19 +42,17 @@ export const Display = styled.div`
 
 export const ExperienceList = styled.ul`
   @media screen and (max-width: 720px) {
-    display: none;
+    overflow-x: scroll;
+    display: flex;
+    white-space: nowrap;
+    width: 100%;
+    height: 55px;
   }
 `;
 
 export const ScrollingMenu = styled.div`
   display: none;
   @media screen and (max-width: 720px) {
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 55px;
   }
 `;
 
@@ -76,7 +74,7 @@ export const ListItem = styled.li`
     border-left: none;
     border-bottom: 2px solid ${(props) => props.theme.colors.backgroundDark200};
     width: 144px;
-    padding-left: 0;
+    padding: 0 20px;
     margin: 0 auto;
     justify-content: center;
   }
@@ -98,8 +96,6 @@ export const ExperienceTitle = styled.h3`
   @media screen and (max-width: 720px) {
     font-size: 16px;
     margin: 2.5em 0 1em;
-  }
-  @media screen and (max-width: 420px) {
     display: block;
   }
 `;
@@ -121,11 +117,6 @@ export const ExperienceDate = styled.p`
 
   @media screen and (max-width: 720px) {
     font-size: 12px;
-    top: 36px;
-    right: 50px;
-  }
-
-  @media screen and (max-width: 420px) {
     top: 0;
     right: 0;
     margin-bottom: 10px;
