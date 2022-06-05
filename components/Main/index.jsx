@@ -22,6 +22,8 @@ export const Main = () => {
             imgAlt="Logo do Linkedin"
             theme={dark}
             link="https://www.linkedin.com/in/monteiroraul/"
+            borderColor1="#9358F7"
+            borderColor2="#10D7E2"
           />
           <StyledButton
             title="GitHub"
@@ -29,6 +31,8 @@ export const Main = () => {
             imgAlt="Logo do GitHub"
             theme={dark}
             link="https://github.com/raulbtmonteiro"
+            borderColor1="#D24074"
+            borderColor2="#6518B4"
           />
         </MainButtons>
       </MainWrapper>

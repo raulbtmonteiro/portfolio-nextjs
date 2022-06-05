@@ -4,8 +4,8 @@ function StyledButton(props) {
   return (
     <ButtonType
       theme={props.theme}
-      borderColor1="#9358F7"
-      borderColor2="#10D7E2"
+      borderColor1={props.borderColor1}
+      borderColor2={props.borderColor2}
       href={props.link}
       target="_blank"
       download={props.download}

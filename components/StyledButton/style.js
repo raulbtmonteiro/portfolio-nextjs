@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-export const ButtonType = styled.a`
+export const ButtonType = styled.a.attrs((props) => ({
+  color1: props.borderColor1,
+  color2: props.borderColor2,
+}))`
   font-weight: 600;
   font-size: 16px;
   line-height: 1.2em;
@@ -16,7 +19,11 @@ export const ButtonType = styled.a`
 
   background-color: transparent;
   border: 2px solid transparent;
-  border-image: linear-gradient(#9358f7, #10d7e2);
+  border-image: linear-gradient(
+    -45deg,
+    ${(props) => props.color1},
+    ${(props) => props.color2}
+  );
   border-image-slice: 1;
   border-radius: 4px;
 

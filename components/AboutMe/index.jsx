@@ -72,8 +72,10 @@ export const AboutMe = () => {
               imgSrc="/images/download-cloud.svg"
               imgAlt="Download da nuvem"
               theme={dark}
-              link="https://portfolio-nextjs-ecru-three.vercel.app/curriculo.pdf"
+              link="https://drive.google.com/u/0/uc?id=1eWwGGa6NPZoNQOF-icyYkI2cq-ynAG88&export=download"
               download
+              borderColor1="#D24074"
+              borderColor2="#6518B4"
             />
             <StyledButton
               title="E-mail"
@@ -81,6 +83,8 @@ export const AboutMe = () => {
               imgAlt="Carta de correio"
               theme={dark}
               link="mailto:raulbtmonteiro@gmail.com"
+              borderColor1="#9358F7"
+              borderColor2="#10D7E2"
             />
           </AboutMeButtons>
         </div>
