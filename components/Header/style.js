@@ -47,6 +47,10 @@ export const HeaderNavBar = styled.nav`
 
     margin-left: 66px;
     color: ${(props) => props.theme.colors.grayLight};
+
+    :hover {
+      color: ${(props) => props.theme.colors.light};
+    }
   }
 
   @media screen and (max-width: 720px) {

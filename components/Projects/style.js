@@ -133,6 +133,10 @@ export const CardButton = styled.a`
     margin-right: 1em;
   }
 
+  :hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
   @media screen and (max-width: 720px) {
     font-size: 12.8px;
     width: 100%;
