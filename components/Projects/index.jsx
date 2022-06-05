@@ -49,7 +49,7 @@ const projectsArray = [
 
 export const Projects = () => {
   return (
-    <ProjectsContainer theme={dark}>
+    <ProjectsContainer theme={dark} id="projects">
       <ProjectsWrapper>
         <ProjectsTitle theme={dark}>Projetos</ProjectsTitle>
         <ProjectsDisplay>

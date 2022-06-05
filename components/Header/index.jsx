@@ -19,15 +19,15 @@ const navItens = [
   },
   {
     title: "Sobre mim",
-    link: "/",
+    link: "#sobremim",
   },
   {
     title: "Experiências",
-    link: "/",
+    link: "#experiences",
   },
   {
     title: "Projetos",
-    link: "/",
+    link: "#projects",
   },
 ];
 
@@ -48,9 +48,9 @@ export const Header = () => {
           </CloseButton>
           {navItens.map((item) => {
             return (
-              <Link key={item.title} href={item.link}>
-                {item.title}
-              </Link>
+              <div key={item.title} onClick={() => setIsVisible(!isVisible)}>
+                <Link href={item.link}>{item.title}</Link>
+              </div>
             );
           })}
         </HeaderNavBar>

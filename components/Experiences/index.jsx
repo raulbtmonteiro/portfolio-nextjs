@@ -83,14 +83,12 @@ export const Experiences = () => {
       if (e.target.innerText === experiencesArray[i].company) {
         setExperienceShow(experiencesArray[i]);
         setIsSelected(true);
-      } else {
-        setIsSelected(false);
       }
     }
   };
 
   return (
-    <ExperienceContainer theme={dark}>
+    <ExperienceContainer theme={dark} id="experiences">
       <ExperienceWrapper>
         <DisplayTitle theme={dark}>Experiência</DisplayTitle>
         <Display>

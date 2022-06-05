@@ -40,7 +40,7 @@ const socialMediaArray = [
 
 export const AboutMe = () => {
   return (
-    <AboutMeContainer theme={dark}>
+    <AboutMeContainer theme={dark} id="#sobremim">
       <AboutMeWrapper>
         <AboutMeImg
           theme={dark}
