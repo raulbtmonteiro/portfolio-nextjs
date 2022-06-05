@@ -5,7 +5,7 @@ import {
   Display,
   DisplayTitle,
   ExperienceList,
-  ExperienceCarousel,
+  ScrollingMenu,
   ListItem,
   ExperienceInfo,
   ExperienceTitle,
@@ -13,7 +13,7 @@ import {
   ExperienceEmployer,
   ExperienceDescription,
 } from "./style.js";
-import Carousel from "react-material-ui-carousel";
+import HorizontalScroll from "react-scroll-horizontal";
 import { useEffect, useState } from "react";
 
 const experiencesArray = [
@@ -54,28 +54,6 @@ const experiencesArray = [
   },
 ];
 
-function FuncaoCarousel() {
-  return (
-    <ExperienceCarousel>
-      <Carousel
-        autoPlay={false}
-        indicators={false}
-        navButtonsAlwaysInvisible={true}
-        animation="slide"
-        height="55px"
-      >
-        {experiencesArray.map((item) => {
-          return (
-            <ListItem key={item.company} theme={dark}>
-              {item.company}
-            </ListItem>
-          );
-        })}
-      </Carousel>
-    </ExperienceCarousel>
-  );
-}
-
 export const Experiences = () => {
   const [experienceShow, setExperienceShow] = useState(experiencesArray[0]);
 
@@ -115,6 +93,21 @@ export const Experiences = () => {
               );
             })}
           </ExperienceList>
+          <ScrollingMenu>
+            <HorizontalScroll>
+              {experiencesArray.map((item) => {
+                return (
+                  <ListItem
+                    key={item.company}
+                    theme={dark}
+                    onClick={(e) => HandleChange(e)}
+                  >
+                    {item.company}
+                  </ListItem>
+                );
+              })}
+            </HorizontalScroll>
+          </ScrollingMenu>
           <ExperienceInfo>
             <ExperienceTitle theme={dark}>
               {experienceShow.position}

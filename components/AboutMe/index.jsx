@@ -36,6 +36,12 @@ const socialMediaArray = [
     alt: "logo do facebook",
     url: "https://www.facebook.com/monteirorbt/",
   },
+  {
+    name: "whatsapp",
+    icon: "/images/social_media/whatsapp.svg",
+    alt: "logo do whatsapp",
+    url: "https://wa.me/5531997201454",
+  },
 ];
 
 export const AboutMe = () => {

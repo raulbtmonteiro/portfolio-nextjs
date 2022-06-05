@@ -42,18 +42,25 @@ export const Display = styled.div`
 
 export const ExperienceList = styled.ul`
   @media screen and (max-width: 720px) {
+    display: none;
+  }
+`;
+
+export const ScrollingMenu = styled.div`
+  display: none;
+  @media screen and (max-width: 720px) {
+    overflow: hidden;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     height: 55px;
   }
 `;
 
-export const ExperienceCarousel = styled.ul``;
-
 export const ListItem = styled.li`
   list-style-type: none;
-  width: 69%;
+  width: 75%;
   height: 55px;
   display: flex;
   align-items: center;
