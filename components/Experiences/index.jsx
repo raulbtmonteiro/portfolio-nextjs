@@ -5,7 +5,6 @@ import {
   Display,
   DisplayTitle,
   ExperienceList,
-  ScrollingMenu,
   ListItem,
   ExperienceInfo,
   ExperienceTitle,
@@ -13,7 +12,6 @@ import {
   ExperienceEmployer,
   ExperienceDescription,
 } from "./style.js";
-import HorizontalScroll from "react-scroll-horizontal";
 import { useEffect, useState } from "react";
 
 const experiencesArray = [
@@ -79,6 +77,7 @@ export const Experiences = () => {
     <ExperienceContainer theme={dark} id="experiences">
       <ExperienceWrapper>
         <DisplayTitle theme={dark}>Experiência</DisplayTitle>
+
         <Display>
           <ExperienceList id="experience-list">
             {experiencesArray.map((item) => {
@@ -93,22 +92,7 @@ export const Experiences = () => {
               );
             })}
           </ExperienceList>
-          <ScrollingMenu>
-            <HorizontalScroll id="container">
-              {experiencesArray.map((item) => {
-                return (
-                  <ListItem
-                    key={item.company}
-                    theme={dark}
-                    onClick={(e) => HandleChange(e)}
-                    id="component"
-                  >
-                    {item.company}
-                  </ListItem>
-                );
-              })}
-            </HorizontalScroll>
-          </ScrollingMenu>
+
           <ExperienceInfo>
             <ExperienceTitle theme={dark}>
               {experienceShow.position}

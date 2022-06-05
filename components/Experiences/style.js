@@ -47,6 +47,9 @@ export const ExperienceList = styled.ul`
     white-space: nowrap;
     width: 100%;
     height: 55px;
+    ::-webkit-scrollbar {
+      display: none;
+    }
   }
 `;
 
