@@ -17,7 +17,7 @@ const projectsArray = [
     img: "/images/projects/christmas.jpg",
     name: "Christmas",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
+      "Projeto realizado com base no desafio 16 do Iuri Silva, idealizador do projeto Codelândia. Toda a composição do código é de autoria própria. Utilizada a biblioteca React e styled-components para a confecção da página.",
     tecnologies: "JavaScript React styled-components",
     link: "https://github.com/raulbtmonteiro/react-christmas",
   },
@@ -25,7 +25,7 @@ const projectsArray = [
     img: "/images/projects/rachi.jpg",
     name: "Rachi",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
+      "Projeto realizado com base no desafio 19 do Iuri Silva, idealizador do projeto Codelândia. Toda a composição do código é de autoria própria. Utilizada a biblioteca React para a confecção da página.",
     tecnologies: "JavaScript CSS React",
     link: "https://github.com/raulbtmonteiro/react-rachi",
   },
@@ -41,7 +41,7 @@ const projectsArray = [
     img: "/images/projects/tip-calculator-app.jpg",
     name: "Tip calculator app",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
+      "Projeto desenvolvido em desafio proposto pelo site Frontend Mentor. Código de autoria própria.",
     tecnologies: "HTML CSS JavaScript",
     link: "https://tip-calculator-app-tau-seven.vercel.app/",
   },
