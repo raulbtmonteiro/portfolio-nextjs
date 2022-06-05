@@ -14,7 +14,7 @@ import {
   ExperienceDescription,
 } from "./style.js";
 import Carousel from "react-material-ui-carousel";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const experiencesArray = [
   {
@@ -35,19 +35,22 @@ const experiencesArray = [
     position: "Estagiário de Obras",
     time: "Fev/2021 - Dez/2021",
     company: "MRV Engenharia",
-    description: "Descrição",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna.",
   },
   {
     position: "Estagiário de Operação de Trens",
     time: "Jun/2019 - Abr/2020",
     company: "MRS Logística",
-    description: "Descrição",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna.",
   },
   {
     position: "Diretor-Presidente",
     time: "Mai/2017 - Ago/2019",
     company: "Ideal Consultoria",
-    description: "Descrição",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna.",
   },
 ];
 
@@ -76,6 +79,12 @@ function FuncaoCarousel() {
 export const Experiences = () => {
   const [experienceShow, setExperienceShow] = useState(experiencesArray[0]);
 
+  useEffect(() => {
+    const experienceSection = document.getElementById("experience-list");
+    const firstListItem = experienceSection.children[0];
+    firstListItem.id = "selectedButton";
+  }, []);
+
   const HandleChange = (e) => {
     const arraySize = experiencesArray.length;
     const list = e.target.parentNode;
@@ -93,7 +102,7 @@ export const Experiences = () => {
       <ExperienceWrapper>
         <DisplayTitle theme={dark}>Experiência</DisplayTitle>
         <Display>
-          <ExperienceList>
+          <ExperienceList id="experience-list">
             {experiencesArray.map((item) => {
               return (
                 <ListItem
