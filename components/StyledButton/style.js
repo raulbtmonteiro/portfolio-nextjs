@@ -26,9 +26,20 @@ export const ButtonType = styled.a.attrs((props) => ({
   );
   border-image-slice: 1;
   border-radius: 4px;
+  transition: 0.5s;
 
   img {
     margin-right: 1em;
+  }
+
+  :hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-image: linear-gradient(
+      45deg,
+      ${(props) => props.color1},
+      ${(props) => props.color2}
+    );
+    border-image-slice: 1;
   }
 
   @media screen and (max-width: 720px) {

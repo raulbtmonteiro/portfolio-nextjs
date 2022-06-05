@@ -88,6 +88,7 @@ export const CardDescription = styled.p`
   font-size: 16px;
   line-height: 1.62em;
 
+  height: 104px;
   max-width: 500px;
   margin-bottom: 1.625em;
   color: ${(props) => props.theme.colors.grayLight};

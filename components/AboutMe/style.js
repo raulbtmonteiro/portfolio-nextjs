@@ -91,10 +91,15 @@ export const SocialMediaList = styled.div`
     justify-content: center;
     align-items: center;
 
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
     margin-right: 20px;
+    transition: 0.5s;
+
+    :hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
   }
 `;
 
