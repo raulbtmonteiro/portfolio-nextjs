@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useState } from "react";
-import { dark } from "../../themes/dark";
 import {
   HeaderContainer,
   HeaderWrapper,
