@@ -11,7 +11,7 @@ function Formacao() {
       <GlobalStyle />
       <Header theme={theme} />
       <h1>Página em construção</h1>
-      <Footer />
+      <Footer theme={theme} />
     </>
   );
 }
