@@ -5,17 +5,22 @@ import {
   LogoContainer,
   Logo,
 } from "./style";
+import { ThemeProvider, useTheme } from "styled-components";
 
-export const Footer = ({ theme }) => {
+export const Footer = () => {
+  const theme = useTheme();
+
   return (
-    <FooterContainer theme={theme}>
-      <FooterWrapper>
-        <Copyright theme={theme}>@ 2022 - Iuri Silva</Copyright>
-        <LogoContainer>
-          <Copyright theme={theme}>Powered by</Copyright>
-          <Logo src="/images/iuricode-logo.png" alt="Logo Codelândia" />
-        </LogoContainer>
-      </FooterWrapper>
-    </FooterContainer>
+    <ThemeProvider theme={theme}>
+      <FooterContainer>
+        <FooterWrapper>
+          <Copyright>@ 2022 - Iuri Silva</Copyright>
+          <LogoContainer>
+            <Copyright>Powered by</Copyright>
+            <Logo src="/images/iuricode-logo.png" alt="Logo Codelândia" />
+          </LogoContainer>
+        </FooterWrapper>
+      </FooterContainer>
+    </ThemeProvider>
   );
 };

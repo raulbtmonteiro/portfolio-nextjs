@@ -10,6 +10,7 @@ import {
   YDirection,
   HamburgerMenu,
 } from "./style";
+import { ThemeProvider, useTheme } from "styled-components";
 
 const navItens = [
   {
@@ -30,35 +31,38 @@ const navItens = [
   },
 ];
 
-export const Header = ({ theme }) => {
+export const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const theme = useTheme();
 
   return (
-    <HeaderContainer theme={theme}>
-      <HeaderWrapper theme={theme}>
-        <HeaderTitle theme={theme}>Portfólio</HeaderTitle>
-        <HeaderNavBar theme={theme} isVisible={isVisible}>
-          <CloseButton
-            isVisible={isVisible}
-            onClick={() => setIsVisible(!isVisible)}
-          >
-            <XDirection theme={theme} />
-            <YDirection theme={theme} />
-          </CloseButton>
-          {navItens.map((item) => {
-            return (
-              <div key={item.title} onClick={() => setIsVisible(!isVisible)}>
-                <Link href={item.link}>{item.title}</Link>
-              </div>
-            );
-          })}
-        </HeaderNavBar>
-        <HamburgerMenu theme={theme} onClick={() => setIsVisible(!isVisible)}>
-          <div />
-          <div />
-          <div />
-        </HamburgerMenu>
-      </HeaderWrapper>
-    </HeaderContainer>
+    <ThemeProvider theme={theme}>
+      <HeaderContainer>
+        <HeaderWrapper>
+          <HeaderTitle>Portfólio</HeaderTitle>
+          <HeaderNavBar isVisible={isVisible}>
+            <CloseButton
+              isVisible={isVisible}
+              onClick={() => setIsVisible(!isVisible)}
+            >
+              <XDirection />
+              <YDirection />
+            </CloseButton>
+            {navItens.map((item) => {
+              return (
+                <div key={item.title} onClick={() => setIsVisible(!isVisible)}>
+                  <Link href={item.link}>{item.title}</Link>
+                </div>
+              );
+            })}
+          </HeaderNavBar>
+          <HamburgerMenu onClick={() => setIsVisible(!isVisible)}>
+            <div />
+            <div />
+            <div />
+          </HamburgerMenu>
+        </HeaderWrapper>
+      </HeaderContainer>
+    </ThemeProvider>
   );
 };

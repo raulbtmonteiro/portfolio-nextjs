@@ -9,6 +9,7 @@ import {
 import { GlobalStyle } from "../themes/globalStyle";
 import { dark } from "../themes/dark";
 import { useState } from "react";
+import { ThemeProvider } from "styled-components";
 
 function Home() {
   const [theme, setTheme] = useState(dark);
@@ -16,14 +17,16 @@ function Home() {
   return (
     <>
       <GlobalStyle />
-      <Header theme={theme} />
-      <main>
-        <Main theme={theme} />
-        <AboutMe theme={theme} />
-        <Experiences theme={theme} />
-        <Projects theme={theme} />
-      </main>
-      <Footer theme={theme} />
+      <ThemeProvider theme={theme}>
+        <Header />
+        <main>
+          <Main />
+          <AboutMe />
+          <Experiences />
+          <Projects />
+        </main>
+        <Footer />
+      </ThemeProvider>
     </>
   );
 }

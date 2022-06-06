@@ -12,6 +12,7 @@ import {
   ExperienceDescription,
 } from "./style.js";
 import { useEffect, useState } from "react";
+import { ThemeProvider, useTheme } from "styled-components";
 
 const experiencesArray = [
   {
@@ -51,8 +52,9 @@ const experiencesArray = [
   },
 ];
 
-export const Experiences = ({ theme }) => {
+export const Experiences = () => {
   const [experienceShow, setExperienceShow] = useState(experiencesArray[0]);
+  const theme = useTheme();
 
   useEffect(() => {
     const experienceSection = document.getElementById("experience-list");
@@ -73,39 +75,33 @@ export const Experiences = ({ theme }) => {
   };
 
   return (
-    <ExperienceContainer theme={theme} id="experiences">
-      <ExperienceWrapper>
-        <DisplayTitle theme={theme}>Experiência</DisplayTitle>
+    <ThemeProvider theme={theme}>
+      <ExperienceContainer id="experiences">
+        <ExperienceWrapper>
+          <DisplayTitle>Experiência</DisplayTitle>
 
-        <Display>
-          <ExperienceList id="experience-list">
-            {experiencesArray.map((item) => {
-              return (
-                <ListItem
-                  key={item.company}
-                  theme={theme}
-                  onClick={(e) => HandleChange(e)}
-                >
-                  {item.company}
-                </ListItem>
-              );
-            })}
-          </ExperienceList>
+          <Display>
+            <ExperienceList id="experience-list">
+              {experiencesArray.map((item) => {
+                return (
+                  <ListItem key={item.company} onClick={(e) => HandleChange(e)}>
+                    {item.company}
+                  </ListItem>
+                );
+              })}
+            </ExperienceList>
 
-          <ExperienceInfo>
-            <ExperienceTitle theme={theme}>
-              {experienceShow.position}
-            </ExperienceTitle>
-            <ExperienceDate theme={theme}>{experienceShow.time}</ExperienceDate>
-            <ExperienceEmployer theme={theme}>
-              {experienceShow.company}
-            </ExperienceEmployer>
-            <ExperienceDescription theme={theme}>
-              {experienceShow.description}
-            </ExperienceDescription>
-          </ExperienceInfo>
-        </Display>
-      </ExperienceWrapper>
-    </ExperienceContainer>
+            <ExperienceInfo>
+              <ExperienceTitle>{experienceShow.position}</ExperienceTitle>
+              <ExperienceDate>{experienceShow.time}</ExperienceDate>
+              <ExperienceEmployer>{experienceShow.company}</ExperienceEmployer>
+              <ExperienceDescription>
+                {experienceShow.description}
+              </ExperienceDescription>
+            </ExperienceInfo>
+          </Display>
+        </ExperienceWrapper>
+      </ExperienceContainer>
+    </ThemeProvider>
   );
 };

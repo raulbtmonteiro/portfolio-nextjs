@@ -10,6 +10,7 @@ import {
   CardTecnologies,
   CardButton,
 } from "./style";
+import { ThemeProvider, useTheme } from "styled-components";
 
 const projectsArray = [
   {
@@ -46,31 +47,31 @@ const projectsArray = [
   },
 ];
 
-export const Projects = ({ theme }) => {
+export const Projects = () => {
+  const theme = useTheme();
+
   return (
-    <ProjectsContainer theme={theme} id="projects">
-      <ProjectsWrapper>
-        <ProjectsTitle theme={theme}>Projetos</ProjectsTitle>
-        <ProjectsDisplay>
-          {projectsArray.map((item) => {
-            return (
-              <ProjectCard key={item.name}>
-                <CardImg theme={theme} src={item.img} />
-                <CardTitle theme={theme}>{item.name}</CardTitle>
-                <CardDescription theme={theme}>
-                  {item.description}
-                </CardDescription>
-                <CardTecnologies theme={theme}>
-                  {item.tecnologies}
-                </CardTecnologies>
-                <CardButton theme={theme} target="_blank" href={item.link}>
-                  <img src="/images/link.svg" /> Visualizar
-                </CardButton>
-              </ProjectCard>
-            );
-          })}
-        </ProjectsDisplay>
-      </ProjectsWrapper>
-    </ProjectsContainer>
+    <ThemeProvider theme={theme}>
+      <ProjectsContainer id="projects">
+        <ProjectsWrapper>
+          <ProjectsTitle>Projetos</ProjectsTitle>
+          <ProjectsDisplay>
+            {projectsArray.map((item) => {
+              return (
+                <ProjectCard key={item.name}>
+                  <CardImg src={item.img} />
+                  <CardTitle>{item.name}</CardTitle>
+                  <CardDescription>{item.description}</CardDescription>
+                  <CardTecnologies>{item.tecnologies}</CardTecnologies>
+                  <CardButton target="_blank" href={item.link}>
+                    <img src="/images/link.svg" /> Visualizar
+                  </CardButton>
+                </ProjectCard>
+              );
+            })}
+          </ProjectsDisplay>
+        </ProjectsWrapper>
+      </ProjectsContainer>
+    </ThemeProvider>
   );
 };
