@@ -1,12 +1,13 @@
 import { Header, Footer } from "../components";
 
-function Formacao() {
+function Contato() {
   return (
     <>
       <Header />
+      <h1>Página em construção</h1>
       <Footer />
     </>
   );
 }
 
-export default Formacao;
+export default Contato;

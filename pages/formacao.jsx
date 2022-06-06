@@ -1,11 +1,10 @@
-import { Header, Education, Experiences, Footer } from "../components";
+import { Header, Footer } from "../components";
 
 function Formacao() {
   return (
     <>
       <Header />
-      <Education />
-      <Experiences />
+      <h1>Página em construção</h1>
       <Footer />
     </>
   );
