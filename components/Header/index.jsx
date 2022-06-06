@@ -31,20 +31,20 @@ const navItens = [
   },
 ];
 
-export const Header = () => {
+export const Header = ({ theme }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <HeaderContainer theme={dark}>
-      <HeaderWrapper theme={dark}>
-        <HeaderTitle theme={dark}>Portfólio</HeaderTitle>
-        <HeaderNavBar theme={dark} isVisible={isVisible}>
+    <HeaderContainer theme={theme}>
+      <HeaderWrapper theme={theme}>
+        <HeaderTitle theme={theme}>Portfólio</HeaderTitle>
+        <HeaderNavBar theme={theme} isVisible={isVisible}>
           <CloseButton
             isVisible={isVisible}
             onClick={() => setIsVisible(!isVisible)}
           >
-            <XDirection theme={dark} />
-            <YDirection theme={dark} />
+            <XDirection theme={theme} />
+            <YDirection theme={theme} />
           </CloseButton>
           {navItens.map((item) => {
             return (
@@ -54,7 +54,7 @@ export const Header = () => {
             );
           })}
         </HeaderNavBar>
-        <HamburgerMenu theme={dark} onClick={() => setIsVisible(!isVisible)}>
+        <HamburgerMenu theme={theme} onClick={() => setIsVisible(!isVisible)}>
           <div />
           <div />
           <div />

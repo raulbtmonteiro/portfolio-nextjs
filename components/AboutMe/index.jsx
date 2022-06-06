@@ -1,4 +1,3 @@
-import { dark } from "../../themes/dark";
 import {
   AboutMeContainer,
   AboutMeWrapper,
@@ -44,21 +43,21 @@ const socialMediaArray = [
   },
 ];
 
-export const AboutMe = () => {
+export const AboutMe = ({ theme }) => {
   return (
-    <AboutMeContainer theme={dark} id="#sobremim">
+    <AboutMeContainer theme={theme} id="#sobremim">
       <AboutMeWrapper>
         <AboutMeImg
-          theme={dark}
+          theme={theme}
           src="/images/foto.jpg"
           alt="selfie de Raul Monteiro"
         />
         <div>
-          <AboutMeTitle theme={dark}>Sobre mim</AboutMeTitle>
-          <AboutMeLocation theme={dark}>
+          <AboutMeTitle theme={theme}>Sobre mim</AboutMeTitle>
+          <AboutMeLocation theme={theme}>
             Mogi Guaçu - SP, Brasil
           </AboutMeLocation>
-          <AboutMeDescription theme={dark}>
+          <AboutMeDescription theme={theme}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id
             egestas dui. Nullam finibus aliquam enim quis faucibus. Aenean ac
             commodo dolor, nec bibendum velit.
@@ -77,7 +76,7 @@ export const AboutMe = () => {
               title="Currículo"
               imgSrc="/images/download-cloud.svg"
               imgAlt="Download da nuvem"
-              theme={dark}
+              theme={theme}
               link="https://drive.google.com/u/0/uc?id=1eWwGGa6NPZoNQOF-icyYkI2cq-ynAG88&export=download"
               download
               borderColor1="#D24074"
@@ -87,7 +86,7 @@ export const AboutMe = () => {
               title="E-mail"
               imgSrc="/images/mail.svg"
               imgAlt="Carta de correio"
-              theme={dark}
+              theme={theme}
               link="mailto:raulbtmonteiro@gmail.com"
               borderColor1="#9358F7"
               borderColor2="#10D7E2"

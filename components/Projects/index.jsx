@@ -1,4 +1,3 @@
-import { dark } from "../../themes/dark";
 import {
   ProjectsContainer,
   ProjectsWrapper,
@@ -47,24 +46,24 @@ const projectsArray = [
   },
 ];
 
-export const Projects = () => {
+export const Projects = ({ theme }) => {
   return (
-    <ProjectsContainer theme={dark} id="projects">
+    <ProjectsContainer theme={theme} id="projects">
       <ProjectsWrapper>
-        <ProjectsTitle theme={dark}>Projetos</ProjectsTitle>
+        <ProjectsTitle theme={theme}>Projetos</ProjectsTitle>
         <ProjectsDisplay>
           {projectsArray.map((item) => {
             return (
               <ProjectCard key={item.name}>
-                <CardImg theme={dark} src={item.img} />
-                <CardTitle theme={dark}>{item.name}</CardTitle>
-                <CardDescription theme={dark}>
+                <CardImg theme={theme} src={item.img} />
+                <CardTitle theme={theme}>{item.name}</CardTitle>
+                <CardDescription theme={theme}>
                   {item.description}
                 </CardDescription>
-                <CardTecnologies theme={dark}>
+                <CardTecnologies theme={theme}>
                   {item.tecnologies}
                 </CardTecnologies>
-                <CardButton theme={dark} target="_blank" href={item.link}>
+                <CardButton theme={theme} target="_blank" href={item.link}>
                   <img src="/images/link.svg" /> Visualizar
                 </CardButton>
               </ProjectCard>

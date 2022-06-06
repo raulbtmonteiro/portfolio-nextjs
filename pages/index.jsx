@@ -7,19 +7,23 @@ import {
   Footer,
 } from "../components";
 import { GlobalStyle } from "../themes/globalStyle";
+import { dark } from "../themes/dark";
+import { useState } from "react";
 
 function Home() {
+  const [theme, setTheme] = useState(dark);
+
   return (
     <>
       <GlobalStyle />
-      <Header />
+      <Header theme={theme} />
       <main>
-        <Main />
-        <AboutMe />
-        <Experiences />
-        <Projects />
+        <Main theme={theme} />
+        <AboutMe theme={theme} />
+        <Experiences theme={theme} />
+        <Projects theme={theme} />
       </main>
-      <Footer />
+      <Footer theme={theme} />
     </>
   );
 }

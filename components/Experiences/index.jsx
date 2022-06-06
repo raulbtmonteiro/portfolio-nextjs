@@ -1,4 +1,3 @@
-import { dark } from "../../themes/dark";
 import {
   ExperienceContainer,
   ExperienceWrapper,
@@ -52,7 +51,7 @@ const experiencesArray = [
   },
 ];
 
-export const Experiences = () => {
+export const Experiences = ({ theme }) => {
   const [experienceShow, setExperienceShow] = useState(experiencesArray[0]);
 
   useEffect(() => {
@@ -74,9 +73,9 @@ export const Experiences = () => {
   };
 
   return (
-    <ExperienceContainer theme={dark} id="experiences">
+    <ExperienceContainer theme={theme} id="experiences">
       <ExperienceWrapper>
-        <DisplayTitle theme={dark}>Experiência</DisplayTitle>
+        <DisplayTitle theme={theme}>Experiência</DisplayTitle>
 
         <Display>
           <ExperienceList id="experience-list">
@@ -84,7 +83,7 @@ export const Experiences = () => {
               return (
                 <ListItem
                   key={item.company}
-                  theme={dark}
+                  theme={theme}
                   onClick={(e) => HandleChange(e)}
                 >
                   {item.company}
@@ -94,14 +93,14 @@ export const Experiences = () => {
           </ExperienceList>
 
           <ExperienceInfo>
-            <ExperienceTitle theme={dark}>
+            <ExperienceTitle theme={theme}>
               {experienceShow.position}
             </ExperienceTitle>
-            <ExperienceDate theme={dark}>{experienceShow.time}</ExperienceDate>
-            <ExperienceEmployer theme={dark}>
+            <ExperienceDate theme={theme}>{experienceShow.time}</ExperienceDate>
+            <ExperienceEmployer theme={theme}>
               {experienceShow.company}
             </ExperienceEmployer>
-            <ExperienceDescription theme={dark}>
+            <ExperienceDescription theme={theme}>
               {experienceShow.description}
             </ExperienceDescription>
           </ExperienceInfo>

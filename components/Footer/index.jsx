@@ -1,4 +1,3 @@
-import { dark } from "../../themes/dark";
 import {
   FooterContainer,
   FooterWrapper,
@@ -7,13 +6,13 @@ import {
   Logo,
 } from "./style";
 
-export const Footer = () => {
+export const Footer = ({ theme }) => {
   return (
-    <FooterContainer theme={dark}>
+    <FooterContainer theme={theme}>
       <FooterWrapper>
-        <Copyright theme={dark}>@ 2022 - Iuri Silva</Copyright>
+        <Copyright theme={theme}>@ 2022 - Iuri Silva</Copyright>
         <LogoContainer>
-          <Copyright theme={dark}>Powered by</Copyright>
+          <Copyright theme={theme}>Powered by</Copyright>
           <Logo src="/images/iuricode-logo.png" alt="Logo Codelândia" />
         </LogoContainer>
       </FooterWrapper>
