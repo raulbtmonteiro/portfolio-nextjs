@@ -72,7 +72,7 @@ export const AboutMeDescription = styled.p`
   line-height: 1.78em;
 
   max-width: 530px;
-  margin-bottom: 2.22em;
+  margin-bottom: 1.5em;
 
   color: ${(props) => props.theme.colors.grayLight};
 
@@ -84,7 +84,7 @@ export const AboutMeDescription = styled.p`
 
 export const SocialMediaList = styled.div`
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   a {
     display: flex;

@@ -19,7 +19,7 @@ const projectsArray = [
     description:
       "Projeto realizado com base no desafio 16 do Iuri Silva, idealizador do projeto Codelândia. Toda a composição do código é de autoria própria. Utilizada a biblioteca React e styled-components para a confecção da página.",
     tecnologies: "JavaScript React styled-components",
-    link: "https://github.com/raulbtmonteiro/react-christmas",
+    link: "https://62a08b963b2c3d0083b0e53c--funny-croissant-8ec43c.netlify.app/",
   },
   {
     img: "/images/projects/rachi.jpg",
@@ -27,21 +27,13 @@ const projectsArray = [
     description:
       "Projeto realizado com base no desafio 19 do Iuri Silva, idealizador do projeto Codelândia. Toda a composição do código é de autoria própria. Utilizada a biblioteca React para a confecção da página.",
     tecnologies: "JavaScript CSS React",
-    link: "https://github.com/raulbtmonteiro/react-rachi",
-  },
-  {
-    img: "/images/projects/rachi.jpg",
-    name: "Busca CEP",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit interdum odio eu varius.",
-    tecnologies: "React",
-    link: "",
+    link: "https://62a11ac5886a0d04f6aaa9a5--glittery-gecko-51db8f.netlify.app/",
   },
   {
     img: "/images/projects/tip-calculator-app.jpg",
     name: "Tip calculator app",
     description:
-      "Projeto desenvolvido em desafio proposto pelo site Frontend Mentor. Código de autoria própria.",
+      "Calculadora de gorjetas. Projeto desenvolvido em desafio proposto pelo site Frontend Mentor. Código de autoria própria.",
     tecnologies: "HTML CSS JavaScript",
     link: "https://tip-calculator-app-tau-seven.vercel.app/",
   },

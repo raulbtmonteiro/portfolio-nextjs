@@ -16,39 +16,32 @@ import { ThemeProvider, useTheme } from "styled-components";
 
 const experiencesArray = [
   {
-    position: "Desenvolvedor Front-End",
-    time: "Abr/2022 - Atual",
-    company: "Freelancer",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna.",
-  },
-  {
     position: "Agente Comercial",
     time: "Fev/2022 - Atual",
     company: "Banco do Brasil",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna.",
+      "Atendimento ao público, tanto nas SAA quanto nas mesas de atendimento. Segmentação e Prospecção de clientes. Trabalho direcionado com os indicadores da agência. Demandas administrativas internas.Cursos e capacitações internas via Unibb, universidade corporativa da instituição, e Alura",
   },
   {
     position: "Estagiário de Obras",
     time: "Fev/2021 - Dez/2021",
     company: "MRV Engenharia",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna.",
+      "Responsável pelo acompanhamento da execução dos serviços controlados e adequação às normas de qualidade. Gestão da mão de obra e acompanhamento de cronograma. Responsável pelas medições de mão de obra própria e de empreiteiro. Planejamento de pedidos e material em estoque.",
   },
   {
     position: "Estagiário de Operação de Trens",
     time: "Jun/2019 - Abr/2020",
     company: "MRS Logística",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna.",
+      "Atuação na Gerência de Operação de Trens. Responsável pela escala e logística das equipes de maquinistas. Acompanhamento dos indicadores da gerência, sendo o responsável pela atualização e controle diário destes. Análise e controle dos dados via planilhas no Excel.",
   },
   {
     position: "Diretor-Presidente",
     time: "Mai/2017 - Ago/2019",
     company: "Ideal Consultoria",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna.",
+      "A Ideal Consultoria é a empresa júnior do curso de engenharia civil da UFSJ. Atuação como assessor nas Diretorias de Negócios e, posteriormente, de Gestão de Pessoas. Em 2018 guiei a empresa como Diretor-Presidente na busca de atingir nossas metas do planejamento estratégico.",
   },
 ];
 

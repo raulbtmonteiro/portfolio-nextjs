@@ -14,10 +14,12 @@ export const Footer = () => {
     <ThemeProvider theme={theme}>
       <FooterContainer>
         <FooterWrapper>
-          <Copyright>@ 2022 - Iuri Silva</Copyright>
+          <Copyright>@ 2022 - Raul Monteiro</Copyright>
           <LogoContainer>
             <Copyright>Powered by</Copyright>
-            <Logo src="/images/iuricode-logo.png" alt="Logo Codelândia" />
+            <a target="_blank" href="https://www.iuricode.com/">
+              <Logo src="/images/iuricode-logo.png" alt="Logo Codelândia" />
+            </a>
           </LogoContainer>
         </FooterWrapper>
       </FooterContainer>

@@ -13,10 +13,16 @@ import { ThemeProvider, useTheme } from "styled-components";
 
 const socialMediaArray = [
   {
+    name: "whatsapp",
+    icon: "/images/social_media/whatsapp.svg",
+    alt: "logo do whatsapp",
+    url: "https://wa.me/5531997201454",
+  },
+  {
     name: "twitter",
     icon: "/images/social_media/twitter.svg",
     alt: "logo do twitter",
-    url: "https://twitter.com/tortaraul",
+    url: "https://twitter.com",
   },
   {
     name: "youtube",
@@ -36,12 +42,6 @@ const socialMediaArray = [
     alt: "logo do facebook",
     url: "https://www.facebook.com/monteirorbt/",
   },
-  {
-    name: "whatsapp",
-    icon: "/images/social_media/whatsapp.svg",
-    alt: "logo do whatsapp",
-    url: "https://wa.me/5531997201454",
-  },
 ];
 
 export const AboutMe = () => {
@@ -54,11 +54,12 @@ export const AboutMe = () => {
           <AboutMeImg src="/images/foto.jpg" alt="selfie de Raul Monteiro" />
           <div>
             <AboutMeTitle>Sobre mim</AboutMeTitle>
-            <AboutMeLocation>Mogi Guaçu - SP, Brasil</AboutMeLocation>
+            <AboutMeLocation>Mogi Guaçu, Brasil</AboutMeLocation>
             <AboutMeDescription>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              id egestas dui. Nullam finibus aliquam enim quis faucibus. Aenean
-              ac commodo dolor, nec bibendum velit.
+              Mineiro de Beagá morando em terras paulistas. 26 anos e focado
+              para trabalhar com desenvolvimento de aplicações web, em especial
+              no front-end. Sinta-se à vontade para me contatar, não recuso um
+              bom pão de queijo com um cafézin.
             </AboutMeDescription>
             <SocialMediaList>
               {socialMediaArray.map((item) => {
@@ -74,7 +75,7 @@ export const AboutMe = () => {
                 title="Currículo"
                 imgSrc="/images/download-cloud.svg"
                 imgAlt="Download da nuvem"
-                link="https://drive.google.com/u/0/uc?id=1eWwGGa6NPZoNQOF-icyYkI2cq-ynAG88&export=download"
+                link="https://drive.google.com/u/4/uc?id=1CUrS9Ki99NwmrdI4R8Je31_ShRAYgKkC&export=download"
                 download
                 borderColor1="#D24074"
                 borderColor2="#6518B4"
