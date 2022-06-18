@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const ExperienceContainer = styled.section`
   background-color: ${(props) => props.theme.colors.backgroundDark};
@@ -50,12 +50,6 @@ export const ExperienceList = styled.ul`
     ::-webkit-scrollbar {
       display: none;
     }
-  }
-`;
-
-export const ScrollingMenu = styled.div`
-  display: none;
-  @media screen and (max-width: 720px) {
   }
 `;
 

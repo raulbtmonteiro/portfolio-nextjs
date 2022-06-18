@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ButtonType = styled.a.attrs((props) => ({
+export const Button = styled.a.attrs((props) => ({
   color1: props.borderColor1,
   color2: props.borderColor2,
 }))`

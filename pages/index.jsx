@@ -1,6 +1,6 @@
 import {
   Header,
-  Main,
+  Intro,
   AboutMe,
   Experiences,
   Projects,
@@ -10,7 +10,6 @@ import { GlobalStyle } from "../themes/globalStyle";
 import { dark } from "../themes/dark";
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
-import { Html } from "next/dist/pages/_document";
 import Head from "next/head";
 
 function Home() {
@@ -28,7 +27,7 @@ function Home() {
       <ThemeProvider theme={theme}>
         <Header />
         <main>
-          <Main />
+          <Intro />
           <AboutMe />
           <Experiences />
           <Projects />

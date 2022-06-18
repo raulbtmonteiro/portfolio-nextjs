@@ -4,7 +4,7 @@ import {
   Copyright,
   LogoContainer,
   Logo,
-} from "./style";
+} from "./styles";
 import { ThemeProvider, useTheme } from "styled-components";
 
 export const Footer = () => {
@@ -14,11 +14,11 @@ export const Footer = () => {
     <ThemeProvider theme={theme}>
       <FooterContainer>
         <FooterWrapper>
-          <Copyright>@ 2022 - Raul Monteiro</Copyright>
+          <Copyright>© 2022 - Raul Monteiro</Copyright>
           <LogoContainer>
             <Copyright>Powered by</Copyright>
             <a target="_blank" href="https://www.iuricode.com/">
-              <Logo src="/images/iuricode-logo.png" alt="Logo Codelândia" />
+              <Logo src="/images/iuricode-logo.png" alt="Logo Codelândia." />
             </a>
           </LogoContainer>
         </FooterWrapper>

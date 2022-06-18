@@ -1,8 +1,8 @@
-import { ButtonType } from "./style";
+import { Button } from "./styles";
 
-function StyledButton(props) {
+export const LinkButton = (props) => {
   return (
-    <ButtonType
+    <Button
       theme={props.theme}
       borderColor1={props.borderColor1}
       borderColor2={props.borderColor2}
@@ -12,8 +12,6 @@ function StyledButton(props) {
     >
       <img src={props.imgSrc} alt={props.imgAlt} />
       {props.title}
-    </ButtonType>
+    </Button>
   );
-}
-
-export default StyledButton;
+};

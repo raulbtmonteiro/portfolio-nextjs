@@ -7,39 +7,39 @@ import {
   AboutMeDescription,
   SocialMediaList,
   AboutMeButtons,
-} from "./style";
-import StyledButton from "../StyledButton";
+} from "./styles";
+import { LinkButton } from "../LinkButton";
 import { ThemeProvider, useTheme } from "styled-components";
 
 const socialMediaArray = [
   {
     name: "whatsapp",
     icon: "/images/social_media/whatsapp.svg",
-    alt: "logo do whatsapp",
+    alt: "Logo do whatsapp.",
     url: "https://wa.me/5531997201454",
   },
   {
     name: "twitter",
     icon: "/images/social_media/twitter.svg",
-    alt: "logo do twitter",
+    alt: "Logo do twitter.",
     url: "https://twitter.com",
   },
   {
     name: "youtube",
     icon: "/images/social_media/youtube.svg",
-    alt: "logo do youtube",
+    alt: "Logo do youtube.",
     url: "https://www.youtube.com/user/raulbtmonteiro/",
   },
   {
     name: "instagram",
     icon: "/images/social_media/instagram.svg",
-    alt: "logo do instagram",
+    alt: "Logo do instagram.",
     url: "https://www.instagram.com/raulbtm/",
   },
   {
     name: "facebook",
     icon: "/images/social_media/facebook.svg",
-    alt: "logo do facebook",
+    alt: "Logo do facebook.",
     url: "https://www.facebook.com/monteirorbt/",
   },
 ];
@@ -49,9 +49,9 @@ export const AboutMe = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <AboutMeContainer id="#sobremim">
+      <AboutMeContainer id="#aboutme">
         <AboutMeWrapper>
-          <AboutMeImg src="/images/foto.jpg" alt="selfie de Raul Monteiro" />
+          <AboutMeImg src="/images/foto.jpg" alt="Selfie de Raul Monteiro." />
           <div>
             <AboutMeTitle>Sobre mim</AboutMeTitle>
             <AboutMeLocation>Mogi Guaçu, Brasil</AboutMeLocation>
@@ -71,19 +71,19 @@ export const AboutMe = () => {
               })}
             </SocialMediaList>
             <AboutMeButtons>
-              <StyledButton
+              <LinkButton
                 title="Currículo"
                 imgSrc="/images/download-cloud.svg"
-                imgAlt="Download da nuvem"
+                imgAlt="Download da nuvem."
                 link="https://drive.google.com/u/4/uc?id=1CUrS9Ki99NwmrdI4R8Je31_ShRAYgKkC&export=download"
                 download
                 borderColor1="#D24074"
                 borderColor2="#6518B4"
               />
-              <StyledButton
+              <LinkButton
                 title="E-mail"
                 imgSrc="/images/mail.svg"
-                imgAlt="Carta de correio"
+                imgAlt="Carta de correio."
                 link="mailto:raulbtmonteiro@gmail.com"
                 borderColor1="#9358F7"
                 borderColor2="#10D7E2"

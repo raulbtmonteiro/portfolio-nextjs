@@ -10,7 +10,7 @@ import {
   ExperienceDate,
   ExperienceEmployer,
   ExperienceDescription,
-} from "./style.js";
+} from "./styles.js";
 import { useEffect, useState } from "react";
 import { ThemeProvider, useTheme } from "styled-components";
 
@@ -55,7 +55,7 @@ export const Experiences = () => {
     firstListItem.id = "selectedButton";
   }, []);
 
-  const HandleChange = (e) => {
+  const handleChange = (e) => {
     const arraySize = experiencesArray.length;
     const list = e.target.parentNode;
     for (var i = 0; i < arraySize; i++) {
@@ -77,7 +77,7 @@ export const Experiences = () => {
             <ExperienceList id="experience-list">
               {experiencesArray.map((item) => {
                 return (
-                  <ListItem key={item.company} onClick={(e) => HandleChange(e)}>
+                  <ListItem key={item.company} onClick={(e) => handleChange(e)}>
                     {item.company}
                   </ListItem>
                 );

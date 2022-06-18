@@ -9,7 +9,7 @@ import {
   XDirection,
   YDirection,
   HamburgerMenu,
-} from "./style";
+} from "./styles";
 import { ThemeProvider, useTheme } from "styled-components";
 
 const navItens = [
@@ -19,7 +19,7 @@ const navItens = [
   },
   {
     title: "Sobre mim",
-    link: "#sobremim",
+    link: "#aboutme",
   },
   {
     title: "Experiências",

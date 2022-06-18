@@ -1,43 +1,43 @@
 import {
-  MainContainer,
-  MainWrapper,
-  MainDescription,
-  MainTitle,
-  MainButtons,
-} from "./style";
-import StyledButton from "../StyledButton";
+  IntroContainer,
+  IntroWrapper,
+  IntroDescription,
+  IntroTitle,
+  IntroButtons,
+} from "./styles";
+import { LinkButton } from "../LinkButton";
 import { ThemeProvider, useTheme } from "styled-components";
 
-export const Main = () => {
+export const Intro = () => {
   const theme = useTheme();
 
   return (
     <ThemeProvider theme={theme}>
-      <MainContainer>
-        <MainWrapper>
-          <MainDescription>Olá, eu sou</MainDescription>
-          <MainTitle>Raul Monteiro</MainTitle>
-          <MainDescription>Desenvolvedor front-end</MainDescription>
-          <MainButtons>
-            <StyledButton
+      <IntroContainer>
+        <IntroWrapper>
+          <IntroDescription>Olá, eu sou</IntroDescription>
+          <IntroTitle>Raul Monteiro</IntroTitle>
+          <IntroDescription>Desenvolvedor front-end</IntroDescription>
+          <IntroButtons>
+            <LinkButton
               title="Linkedin"
               imgSrc="/images/social_media/linkedin.svg"
-              imgAlt="Logo do Linkedin"
+              imgAlt="Logo do Linkedin."
               link="https://www.linkedin.com/in/monteiroraul/"
               borderColor1="#9358F7"
               borderColor2="#10D7E2"
             />
-            <StyledButton
+            <LinkButton
               title="GitHub"
               imgSrc="/images/social_media/github.svg"
-              imgAlt="Logo do GitHub"
+              imgAlt="Logo do GitHub."
               link="https://github.com/raulbtmonteiro"
               borderColor1="#D24074"
               borderColor2="#6518B4"
             />
-          </MainButtons>
-        </MainWrapper>
-      </MainContainer>
+          </IntroButtons>
+        </IntroWrapper>
+      </IntroContainer>
     </ThemeProvider>
   );
 };
