@@ -20,7 +20,7 @@ const projectsArray = [
     description:
       "Página de produto de e-commerce. Projeto desenvolvido em desafio proposto pelo site Frontend Mentor. Código de autoria própria. Utilizadas as bibliotecas React e Styled-components para confecção da página. Utilização das React Hooks: useState e useEffect.",
     tecnologies: "JavaScript React styled-components",
-    link: "https://dulcet-sprinkles-cb09f5.netlify.app/",
+    link: "https://raulbtmonteiro-ecommerce-page.netlify.app/",
   },
   {
     img: "/images/projects/christmas.jpg",
@@ -29,7 +29,7 @@ const projectsArray = [
     description:
       "Projeto realizado com base no desafio 16 do Iuri Silva, idealizador do projeto Codelândia. Toda a composição do código é de autoria própria. Utilizada a biblioteca React e styled-components para a confecção da página.",
     tecnologies: "JavaScript React styled-components",
-    link: "https://62a08b963b2c3d0083b0e53c--funny-croissant-8ec43c.netlify.app/",
+    link: "https://raulbtmonteiro-christmas.netlify.app/",
   },
   {
     img: "/images/projects/rachi.jpg",
@@ -38,7 +38,7 @@ const projectsArray = [
     description:
       "Projeto realizado com base no desafio 19 do Iuri Silva, idealizador do projeto Codelândia. Toda a composição do código é de autoria própria. Utilizada a biblioteca React para a confecção da página.",
     tecnologies: "JavaScript CSS React",
-    link: "https://62a11ac5886a0d04f6aaa9a5--glittery-gecko-51db8f.netlify.app/",
+    link: "https://raulbtmonteiro-rachi.netlify.app/",
   },
   {
     img: "/images/projects/tip-calculator-app.jpg",
