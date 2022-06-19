@@ -93,6 +93,8 @@ export const CardDescription = styled.p`
   color: ${(props) => props.theme.colors.grayLight};
 
   @media screen and (max-width: 720px) {
+    min-height: 108px;
+    height: fit-content;
     font-size: 14px;
     line-height: 1.29em;
     margin-bottom: 0.6em;
