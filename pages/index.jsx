@@ -18,6 +18,21 @@ function Home() {
   return (
     <>
       <Head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-VB8JWPPXDS"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-VB8JWPPXDS');
+          `,
+          }}
+        />
         <title>Portfólio - Raul Monteiro</title>
         <link rel="icon" href="/images/iuricode-logo.png" />
         <link rel="apple-touch-icon" href="/images/iuricode-logo.png" />
