@@ -73,6 +73,7 @@ export const AboutMeDescription = styled.p`
 
   max-width: 530px;
   margin-bottom: 1.5em;
+  text-align: justify;
 
   color: ${(props) => props.theme.colors.grayLight};
 

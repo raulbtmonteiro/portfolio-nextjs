@@ -141,6 +141,7 @@ export const ExperienceDescription = styled.p`
   line-height: 1.56em;
 
   color: ${(props) => props.theme.colors.grayLight};
+  text-align: justify;
 
   @media screen and (max-width: 720px) {
     font-size: 14px;

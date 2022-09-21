@@ -17,7 +17,7 @@ import { ThemeProvider, useTheme } from "styled-components";
 const experiencesArray = [
   {
     position: "Agente Comercial",
-    time: "Fev/2022 - Atual",
+    time: "Fev/2022 - Ago/2022",
     company: "Banco do Brasil",
     description:
       "Atendimento ao público, tanto nas SAA quanto nas mesas de atendimento. Segmentação e Prospecção de clientes. Trabalho direcionado com os indicadores da agência. Demandas administrativas internas.Cursos e capacitações internas via Unibb, universidade corporativa da instituição, e Alura",

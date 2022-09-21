@@ -54,12 +54,12 @@ export const AboutMe = () => {
           <AboutMeImg src="/images/foto.jpg" alt="Selfie de Raul Monteiro." />
           <div>
             <AboutMeTitle>Sobre mim</AboutMeTitle>
-            <AboutMeLocation>Mogi Guaçu, Brasil</AboutMeLocation>
+            <AboutMeLocation>Campinas, São Paulo</AboutMeLocation>
             <AboutMeDescription>
-              Mineiro de Beagá morando em terras paulistas. 26 anos e focado
-              para trabalhar com desenvolvimento de aplicações web, em especial
-              no front-end. Sinta-se à vontade para me contatar, não recuso um
-              bom pão de queijo com um cafézin.
+              Mineiro de Beagá morando em terras paulistas. Desenvolvedor de
+              aplicações web, em especial no front-end. Principais stacks: HTML,
+              CSS, JavaScrip, React, Styled-Components. Sinta-se à vontade para
+              me contatar, não recuso um bom pão de queijo com um cafézin.
             </AboutMeDescription>
             <SocialMediaList>
               {socialMediaArray.map((item) => {
