@@ -18,6 +18,7 @@ function Home() {
   return (
     <>
       <Head>
+        <html lang="pt-br" />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-VB8JWPPXDS"
