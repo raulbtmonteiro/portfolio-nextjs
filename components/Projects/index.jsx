@@ -63,12 +63,12 @@ export const Projects = () => {
             {projectsArray.map((item) => {
               return (
                 <ProjectCard key={item.name}>
-                  <CardImg src={item.img} />
+                  <CardImg src={item.img} alt={item.alttex} />
                   <CardTitle>{item.name}</CardTitle>
                   <CardDescription>{item.description}</CardDescription>
                   <CardTecnologies>{item.tecnologies}</CardTecnologies>
                   <CardButton target="_blank" href={item.link}>
-                    <img src="/images/link.svg" alt={item.alttex} /> Visualizar
+                    <img src="/images/link.svg" /> Visualizar
                   </CardButton>
                 </ProjectCard>
               );
