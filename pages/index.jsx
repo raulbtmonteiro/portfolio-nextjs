@@ -36,6 +36,7 @@ function Home() {
         <title>Portfólio - Raul Monteiro</title>
         <link rel="icon" href="/images/iuricode-logo.png" />
         <link rel="apple-touch-icon" href="/images/iuricode-logo.png" />
+        <meta name="description" content="Página de portfólio de Raul Monteiro" />
       </Head>
 
       <GlobalStyle />
