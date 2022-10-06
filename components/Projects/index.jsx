@@ -68,7 +68,7 @@ export const Projects = () => {
                   <CardDescription>{item.description}</CardDescription>
                   <CardTecnologies>{item.tecnologies}</CardTecnologies>
                   <CardButton target="_blank" href={item.link}>
-                    <img src="/images/link.svg" /> Visualizar
+                    <img src="/images/link.svg" alt="ícone de link"/> Visualizar
                   </CardButton>
                 </ProjectCard>
               );
