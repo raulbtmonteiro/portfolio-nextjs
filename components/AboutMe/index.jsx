@@ -51,7 +51,7 @@ export const AboutMe = () => {
     <ThemeProvider theme={theme}>
       <AboutMeContainer id="#aboutme">
         <AboutMeWrapper>
-          <AboutMeImg src="/images/foto.jpg" alt="Selfie de Raul Monteiro." />
+          <AboutMeImg src="/images/foto.jpg" alt="Selfie de Raul Monteiro." loading="lazy"/>
           <div>
             <AboutMeTitle>Sobre mim</AboutMeTitle>
             <AboutMeLocation>Campinas, São Paulo</AboutMeLocation>
