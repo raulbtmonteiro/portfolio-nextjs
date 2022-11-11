@@ -81,19 +81,34 @@ export const ExperienceInfo = styled.div`
   max-width: 636px;
 `;
 
+
+export const ExperienceTitleWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1.08em;
+
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 2.5em 0 1em;
+  }
+
+`;
+
 export const ExperienceTitle = styled.h3`
   font-weight: 500;
   font-size: 24px;
   line-height: 1.2em;
+  justify-self: right;
 
-  display: inline-block;
-  margin-bottom: 1.08em;
   color: ${(props) => props.theme.colors.light};
 
   @media screen and (max-width: 720px) {
-    font-size: 16px;
-    margin: 2.5em 0 1em;
-    display: block;
+    font-size: 18px;
+    text-align: left;
   }
 `;
 
@@ -102,21 +117,11 @@ export const ExperienceDate = styled.p`
   font-size: 16px;
   line-height: 1.5em;
 
-  display: inline-block;
-  position: relative;
-  right: -142.84px;
   color: ${(props) => props.theme.colors.light};
-
-  @media screen and (max-width: 920px) {
-    top: 50px;
-    right: 0;
-  }
 
   @media screen and (max-width: 720px) {
     font-size: 12px;
-    top: 0;
-    right: 0;
-    margin-bottom: 10px;
+    text-align: left;
   }
 `;
 

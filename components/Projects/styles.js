@@ -86,6 +86,7 @@ export const CardDescription = styled.p`
   font-weight: 300;
   font-size: 16px;
   line-height: 1.62em;
+  text-align: justify;
 
   height: 104px;
   max-width: 500px;

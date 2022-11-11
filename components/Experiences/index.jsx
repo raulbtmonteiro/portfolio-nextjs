@@ -7,6 +7,7 @@ import {
   ListItem,
   ExperienceInfo,
   ExperienceTitle,
+  ExperienceTitleWrapper,
   ExperienceDate,
   ExperienceEmployer,
   ExperienceDescription,
@@ -15,6 +16,13 @@ import { useEffect, useState } from "react";
 import { ThemeProvider, useTheme } from "styled-components";
 
 const experiencesArray = [
+  {
+    position: "Estagiário Desenvolvedor Front-End",
+    time: "Set/2022 - Dias Atuais",
+    company: "Cia Hering",
+    description:
+      "Desenvolvimento e manutenção dos três e-commerces da cia: Hering, Hering Outlet e Dzarm. Trabalho com as seguintes stacks: React, TypeScript, CSS, VTEX"
+  },
   {
     position: "Agente Comercial",
     time: "Fev/2022 - Ago/2022",
@@ -58,7 +66,7 @@ export const Experiences = () => {
   const handleChange = (e) => {
     const arraySize = experiencesArray.length;
     const list = e.target.parentNode;
-    for (var i = 0; i < arraySize; i++) {
+    for (let i = 0; i < arraySize; i++) {
       list.children[i].id = "";
       if (e.target.innerText === experiencesArray[i].company) {
         setExperienceShow(experiencesArray[i]);
@@ -85,8 +93,10 @@ export const Experiences = () => {
             </ExperienceList>
 
             <ExperienceInfo>
-              <ExperienceTitle>{experienceShow.position}</ExperienceTitle>
-              <ExperienceDate>{experienceShow.time}</ExperienceDate>
+              <ExperienceTitleWrapper>
+                <ExperienceTitle>{experienceShow.position}</ExperienceTitle>
+                <ExperienceDate>{experienceShow.time}</ExperienceDate>
+              </ExperienceTitleWrapper>
               <ExperienceEmployer>{experienceShow.company}</ExperienceEmployer>
               <ExperienceDescription>
                 {experienceShow.description}

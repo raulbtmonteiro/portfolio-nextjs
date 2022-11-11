@@ -19,7 +19,7 @@ const projectsArray = [
     name: "E-commerce product page",
     description:
       "Página de produto de e-commerce. Projeto desenvolvido em desafio proposto pelo site Frontend Mentor. Código de autoria própria. Utilizadas as bibliotecas React e Styled-components para confecção da página. Utilização das React Hooks: useState e useEffect.",
-    tecnologies: "JavaScript React styled-components",
+    tecnologies: "JavaScript | React | styled-components",
     link: "https://raulbtmonteiro-ecommerce-page.netlify.app/",
   },
   {
@@ -28,7 +28,7 @@ const projectsArray = [
     name: "Christmas",
     description:
       "Projeto realizado com base no desafio 16 do Iuri Silva, idealizador do projeto Codelândia. Toda a composição do código é de autoria própria. Utilizada a biblioteca React e styled-components para a confecção da página.",
-    tecnologies: "JavaScript React styled-components",
+    tecnologies: "JavaScript | React | styled-components",
     link: "https://raulbtmonteiro-christmas.netlify.app/",
   },
   {
@@ -37,7 +37,7 @@ const projectsArray = [
     name: "Rachi",
     description:
       "Projeto realizado com base no desafio 19 do Iuri Silva, idealizador do projeto Codelândia. Toda a composição do código é de autoria própria. Utilizada a biblioteca React para a confecção da página.",
-    tecnologies: "JavaScript CSS React",
+    tecnologies: "JavaScript | CSS | React",
     link: "https://raulbtmonteiro-rachi.netlify.app/",
   },
   {
@@ -46,7 +46,7 @@ const projectsArray = [
     name: "Tip calculator app",
     description:
       "Calculadora de gorjetas. Projeto desenvolvido em desafio proposto pelo site Frontend Mentor. Código de autoria própria.",
-    tecnologies: "HTML CSS JavaScript",
+    tecnologies: "HTML | CSS | JavaScript",
     link: "https://tip-calculator-app-tau-seven.vercel.app/",
   },
 ];
