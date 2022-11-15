@@ -7,19 +7,12 @@ export const FooterContainer = styled.footer`
 export const FooterWrapper = styled.div`
   max-width: 1170px;
   margin: 0 auto;
-  height: 100px;
+  height: 70px;
+  padding: 0 24px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @media screen and (max-width: 1170px) {
-    padding: 0 24px;
-  }
-
-  @media screen and (max-width: 720px) {
-    height: 70px;
-  }
 `;
 
 export const Copyright = styled.p`

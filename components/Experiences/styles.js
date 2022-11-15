@@ -7,14 +7,10 @@ export const ExperienceContainer = styled.section`
 export const ExperienceWrapper = styled.div`
   max-width: 1170px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 100px 24px;
 
   display: flex;
   flex-direction: column;
-
-  @media screen and (max-width: 1170px) {
-    padding: 100px 24px;
-  }
 
   @media screen and (max-width: 1170px) {
     padding: 40px 24px;

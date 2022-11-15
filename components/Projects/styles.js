@@ -6,12 +6,8 @@ export const ProjectsContainer = styled.section`
 
 export const ProjectsWrapper = styled.div`
   max-width: 1170px;
-  padding: 100px 0 40px;
+  padding: 100px 24px 40px;
   margin: 0 auto;
-
-  @media screen and (max-width: 1170px) {
-    padding: 100px 24px 40px;
-  }
 
   @media screen and (max-width: 720px) {
     padding: 40px 24px;
@@ -35,7 +31,7 @@ export const ProjectsTitle = styled.h2`
 export const ProjectsDisplay = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 
   @media screen and (max-width: 1170px) {
     justify-content: center;
@@ -47,6 +43,7 @@ export const ProjectsDisplay = styled.div`
 `;
 
 export const ProjectCard = styled.div`
+  max-width: 530px;
   @media screen and (max-width: 720px) {
     width: 312px;
     max-width: 100%;
@@ -89,7 +86,6 @@ export const CardDescription = styled.p`
   text-align: justify;
 
   height: 104px;
-  max-width: 500px;
   margin-bottom: 1.625em;
   color: ${(props) => props.theme.colors.grayLight};
 
@@ -111,6 +107,11 @@ export const CardTecnologies = styled.p`
   color: ${(props) => props.theme.colors.blue};
 `;
 
+export const CardButtonWrapper = styled.div`
+  display: flex;
+  gap: 10px;
+  width: 100%;
+`
 export const CardButton = styled.a`
   display: flex;
   justify-content: center;

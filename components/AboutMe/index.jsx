@@ -19,18 +19,6 @@ const socialMediaArray = [
     url: "https://wa.me/5531997201454",
   },
   {
-    name: "twitter",
-    icon: "/images/social_media/twitter.svg",
-    alt: "Logo do twitter.",
-    url: "https://twitter.com",
-  },
-  {
-    name: "youtube",
-    icon: "/images/social_media/youtube.svg",
-    alt: "Logo do youtube.",
-    url: "https://www.youtube.com/user/raulbtmonteiro/",
-  },
-  {
     name: "instagram",
     icon: "/images/social_media/instagram.svg",
     alt: "Logo do instagram.",
@@ -58,8 +46,7 @@ export const AboutMe = () => {
             <AboutMeDescription>
               Mineiro de Beagá morando em terras paulistas. Desenvolvedor de
               aplicações web, em especial no front-end. Principais stacks: HTML,
-              CSS, JavaScrip, React, Styled-Components. Sinta-se à vontade para
-              me contatar, não recuso um bom pão de queijo com um cafézin.
+              CSS, JavaScrip, React, styled-somponents. Abaixo estão as minhas redes sociais para contato.
             </AboutMeDescription>
             <SocialMediaList>
               {socialMediaArray.map((item) => {

@@ -7,7 +7,8 @@ export const HeaderContainer = styled.header`
 export const HeaderWrapper = styled.div`
   max-width: 1170px;
   margin: 0 auto;
-  height: 109px;
+  padding: 0 24px;
+  height: 70px;
 
   display: flex;
   justify-content: space-between;
@@ -15,13 +16,6 @@ export const HeaderWrapper = styled.div`
 
   border-bottom: 2px solid ${(props) => props.theme.colors.backgroundDark200};
 
-  @media screen and (max-width: 1170px) {
-    padding: 0 24px;
-  }
-
-  @media screen and (max-width: 1170px) {
-    height: 70px;
-  }
 `;
 
 export const HeaderTitle = styled.h2`
@@ -96,44 +90,54 @@ export const HamburgerMenu = styled.div`
     align-items: center;
     gap: 4.05px;
 
-    div {
-      width: 28px;
-      height: 1.4px;
-      background-color: ${(props) => props.theme.colors.light};
-    }
-  }
-`;
-
-export const CloseButton = styled.div`
-  display: none;
-
-  @media screen and (max-width: 720px) {
-    ${({ isVisible }) =>
-      isVisible &&
-      css`
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100px;
-        right: 60px;
-      `}
+    width: 30px;
   }
 `;
 
 export const XDirection = styled.div`
   width: 30px;
   height: 2px;
-  background-color: ${(props) => props.theme.colors.light};
-  transform: rotate(45deg);
+  background-color: ${(props) => props.theme.colors.light};;
   transition: 500ms;
+  z-index: 6;
+
+  ${({ isVisible }) =>
+    isVisible &&
+    css`
+      position: relative;
+      top: 2.7px;
+      width: 35px;
+      transform: rotate(45deg);
+    `}
+
 `;
 
 export const YDirection = styled.div`
   width: 30px;
   height: 2px;
-  position: relative;
-  top: -2px;
   background-color: ${(props) => props.theme.colors.light};
-  transform: rotate(-45deg);
   transition: 500ms;
+  z-index: 6;
+
+  ${({ isVisible }) =>
+    isVisible &&
+    css`
+      position: relative;
+      top: -2.7px;
+      width: 35px;
+      transform: rotate(-45deg);
+    `}
+
+`;
+
+export const Middle = styled.div`
+  width: 30px;
+  height: 2px;
+  background-color: ${(props) => props.theme.colors.light};
+  z-index: 6;
+  ${({ isVisible }) =>
+    isVisible &&
+    css`
+      display: none;
+    `}
 `;

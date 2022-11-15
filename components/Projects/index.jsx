@@ -8,6 +8,7 @@ import {
   CardTitle,
   CardDescription,
   CardTecnologies,
+  CardButtonWrapper,
   CardButton,
 } from "./styles";
 import { ThemeProvider, useTheme } from "styled-components";
@@ -21,6 +22,7 @@ const projectsArray = [
       "Página de produto de e-commerce. Projeto desenvolvido em desafio proposto pelo site Frontend Mentor. Código de autoria própria. Utilizadas as bibliotecas React e Styled-components para confecção da página. Utilização das React Hooks: useState e useEffect.",
     tecnologies: "JavaScript | React | styled-components",
     link: "https://raulbtmonteiro-ecommerce-page.netlify.app/",
+    linkRepositorio: "https://github.com/raulbtmonteiro/ecommerce-product-page"
   },
   {
     img: "/images/projects/christmas.jpg",
@@ -30,6 +32,7 @@ const projectsArray = [
       "Projeto realizado com base no desafio 16 do Iuri Silva, idealizador do projeto Codelândia. Toda a composição do código é de autoria própria. Utilizada a biblioteca React e styled-components para a confecção da página.",
     tecnologies: "JavaScript | React | styled-components",
     link: "https://raulbtmonteiro-christmas.netlify.app/",
+    linkRepositorio: "https://github.com/raulbtmonteiro/react-christmas"
   },
   {
     img: "/images/projects/rachi.jpg",
@@ -39,6 +42,7 @@ const projectsArray = [
       "Projeto realizado com base no desafio 19 do Iuri Silva, idealizador do projeto Codelândia. Toda a composição do código é de autoria própria. Utilizada a biblioteca React para a confecção da página.",
     tecnologies: "JavaScript | CSS | React",
     link: "https://raulbtmonteiro-rachi.netlify.app/",
+    linkRepositorio: "https://github.com/raulbtmonteiro/react-rachi"
   },
   {
     img: "/images/projects/tip-calculator-app.jpg",
@@ -48,6 +52,7 @@ const projectsArray = [
       "Calculadora de gorjetas. Projeto desenvolvido em desafio proposto pelo site Frontend Mentor. Código de autoria própria.",
     tecnologies: "HTML | CSS | JavaScript",
     link: "https://tip-calculator-app-tau-seven.vercel.app/",
+    linkRepositorio: "https://github.com/raulbtmonteiro/tip-calculator-app"
   },
 ];
 
@@ -67,9 +72,15 @@ export const Projects = () => {
                   <CardTitle>{item.name}</CardTitle>
                   <CardDescription>{item.description}</CardDescription>
                   <CardTecnologies>{item.tecnologies}</CardTecnologies>
-                  <CardButton target="_blank" href={item.link}>
-                    <img src="/images/link.svg" alt="ícone de link"/> Visualizar
-                  </CardButton>
+                  <CardButtonWrapper>
+                    <CardButton target="_blank" href={item.link}>
+                      <img src="/images/link.svg" alt="ícone de link"/> Visualizar
+                    </CardButton>
+
+                    <CardButton target="_blank" href={item.linkRepositorio}>
+                      <img src="/images/link.svg" alt="ícone de link"/> Repositório
+                    </CardButton>
+                  </CardButtonWrapper>
                 </ProjectCard>
               );
             })}

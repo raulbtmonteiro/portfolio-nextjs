@@ -14,16 +14,12 @@ export const IntroContainer = styled.section`
 export const IntroWrapper = styled.div`
   max-width: 1170px;
   margin: 0 auto;
-  padding: 152px 0 200px;
+  padding: 152px 24px 200px 24px;
 
   display: grid;
   grid-template-columns: 100%;
   justify-content: space-between;
   align-items: center;
-
-  @media screen and (max-width: 1170px) {
-    padding: 152px 24px 200px 24px;
-  }
 
   @media screen and (max-width: 720px) {
     padding: 50px 24px 55px 24px;

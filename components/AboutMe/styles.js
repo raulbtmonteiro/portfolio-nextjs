@@ -6,18 +6,14 @@ export const AboutMeContainer = styled.section`
 
 export const AboutMeWrapper = styled.div`
   max-width: 1170px;
-  padding: 100px 0;
+  padding: 100px 24px;
   margin: 0 auto;
 
   display: grid;
   grid-template-columns: 40% 60%;
   justify-content: space-between;
   align-items: center;
-
-  @media screen and (max-width: 1170px) {
-    padding: 100px 24px;
-  }
-
+  
   @media screen and (max-width: 720px) {
     grid-template-columns: 100%;
     padding: 40px 24px;
