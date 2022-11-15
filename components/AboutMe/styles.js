@@ -94,6 +94,11 @@ export const SocialMediaList = styled.div`
     margin-right: 20px;
     transition: 0.5s;
 
+    img{
+      width: 24px;
+      height: 24px;
+    }
+
     :hover {
       background-color: rgba(255, 255, 255, 0.05);
     }

@@ -30,6 +30,8 @@ export const Button = styled.a.attrs((props) => ({
 
   img {
     margin-right: 1em;
+    width: 24px;
+    height: 24px;
   }
 
   :hover {
