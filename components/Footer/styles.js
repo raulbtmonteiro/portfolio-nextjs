@@ -34,4 +34,6 @@ export const LogoContainer = styled.div`
 export const Logo = styled.img`
   display: inline-block;
   margin-left: 12px;
+  width: 24px;
+  height: 22px;
 `;
