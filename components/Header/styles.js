@@ -91,6 +91,8 @@ export const HamburgerMenu = styled.div`
     gap: 4.05px;
 
     width: 30px;
+    height: 40px;
+    z-index: 6;
   }
 `;
 
