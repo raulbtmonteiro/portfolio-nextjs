@@ -89,9 +89,9 @@ export const HamburgerMenu = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 4.05px;
+    padding: 10px;
 
     width: 30px;
-    height: 40px;
     z-index: 6;
   }
 `;
