@@ -46,7 +46,7 @@ export const AboutMe = () => {
             <AboutMeDescription>
               Mineiro de Beagá morando em terras paulistas. Desenvolvedor de
               aplicações web, em especial no front-end. Principais stacks: HTML,
-              CSS, JavaScript, React, styled-components. Abaixo estão as minhas redes sociais para contato.
+              CSS, JavaScript, TypeScript, React, styled-components. Abaixo estão as minhas redes sociais para contato.
             </AboutMeDescription>
             <SocialMediaList>
               {socialMediaArray.map((item) => {
