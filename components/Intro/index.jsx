@@ -17,7 +17,7 @@ export const Intro = () => {
         <IntroWrapper>
           <IntroDescription>Olá, eu sou</IntroDescription>
           <IntroTitle>Raul Monteiro</IntroTitle>
-          <IntroDescription>Desenvolvedor front-end</IntroDescription>
+          <IntroDescription>Desenvolvedor WEB</IntroDescription>
           <IntroButtons>
             <LinkButton
               title="Linkedin"
