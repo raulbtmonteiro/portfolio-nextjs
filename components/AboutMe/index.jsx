@@ -39,15 +39,19 @@ export const AboutMe = () => {
     <ThemeProvider theme={theme}>
       <AboutMeContainer id="#aboutme">
         <AboutMeWrapper>
-          <AboutMeImg src="/images/foto.jpg" alt="Selfie de Raul Monteiro." loading="lazy"/>
+          <AboutMeImg
+            src="/images/foto.jpg"
+            alt="Selfie de Raul Monteiro."
+            loading="lazy"
+          />
           <div>
             <AboutMeTitle>Sobre mim</AboutMeTitle>
             <AboutMeLocation>Campinas, São Paulo</AboutMeLocation>
             <AboutMeDescription>
               Mineiro de Beagá morando em terras paulistas. Desenvolvedor de
               aplicações web, em especial no front-end. Principais stacks: HTML,
-              CSS, JavaScript, TypeScript, React, styled-components, NextJS, VTEX IO. 
-              Abaixo estão as minhas redes sociais para contato.
+              CSS, JavaScript, TypeScript, React, styled-components, NextJS,
+              VTEX IO, Java. Abaixo estão as minhas redes sociais para contato.
             </AboutMeDescription>
             <SocialMediaList>
               {socialMediaArray.map((item) => {
