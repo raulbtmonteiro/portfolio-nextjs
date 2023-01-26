@@ -1,3 +1,4 @@
+import { ThemeProvider, useTheme } from "styled-components";
 import {
   FooterContainer,
   FooterWrapper,
@@ -5,7 +6,6 @@ import {
   LogoContainer,
   Logo,
 } from "./styles";
-import { ThemeProvider, useTheme } from "styled-components";
 
 export const Footer = () => {
   const theme = useTheme();

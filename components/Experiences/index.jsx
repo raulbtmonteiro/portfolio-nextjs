@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+import { ThemeProvider, useTheme } from "styled-components";
 import {
   ExperienceContainer,
   ExperienceWrapper,
@@ -12,8 +14,59 @@ import {
   ExperienceEmployer,
   ExperienceDescription,
 } from "./styles.js";
-import { useEffect, useState } from "react";
-import { ThemeProvider, useTheme } from "styled-components";
+
+export const Experiences = () => {
+  const [experienceShow, setExperienceShow] = useState(experiencesArray[0]);
+  const experienceListRef = useRef();
+  const theme = useTheme();
+
+  useEffect(() => {
+    experienceListRef.current.children[0].id = "selectedButton";
+  }, []);
+
+  const handleChange = (e) => {
+    for (let i = 0; i < experiencesArray.length; i++) {
+      experienceListRef.current.children[i].id = "";
+      if (e.target.innerText === experiencesArray[i].company) {
+        setExperienceShow(experiencesArray[i]);
+        e.target.id = "selectedButton";
+      }
+    }
+  };
+
+  return (
+    <ThemeProvider theme={theme}>
+      <ExperienceContainer id="experiences">
+        <ExperienceWrapper>
+          <DisplayTitle>Experiência</DisplayTitle>
+
+          <Display>
+            <ExperienceList ref={experienceListRef}>
+              {experiencesArray.map((item) => {
+                return (
+                  <ListItem key={item.company} onClick={(e) => handleChange(e)}>
+                    {item.company}
+                  </ListItem>
+                );
+              })}
+            </ExperienceList>
+
+            <ExperienceInfo>
+              <ExperienceTitleWrapper>
+                <ExperienceTitle>{experienceShow.position}</ExperienceTitle>
+                <ExperienceDate>{experienceShow.time}</ExperienceDate>
+              </ExperienceTitleWrapper>
+              <ExperienceEmployer>{experienceShow.company}</ExperienceEmployer>
+              <ExperienceDescription>
+                {experienceShow.description}
+              </ExperienceDescription>
+            </ExperienceInfo>
+          </Display>
+        </ExperienceWrapper>
+      </ExperienceContainer>
+    </ThemeProvider>
+  );
+};
 
 const experiencesArray = [
   {
@@ -21,7 +74,7 @@ const experiencesArray = [
     time: "Set/2022 - Dias Atuais",
     company: "Cia Hering",
     description:
-      "Desenvolvimento e manutenção dos três e-commerces da cia: Hering, Hering Outlet e Dzarm. Trabalho com as seguintes stacks: React, TypeScript, CSS, VTEX"
+      "Desenvolvimento e manutenção dos três e-commerces da cia: Hering, Hering Outlet e Dzarm. Trabalho com as seguintes stacks: React, TypeScript, CSS, VTEX",
   },
   {
     position: "Agente Comercial",
@@ -52,59 +105,3 @@ const experiencesArray = [
       "A Ideal Consultoria é a empresa júnior do curso de engenharia civil da UFSJ. Atuação como assessor nas Diretorias de Negócios e, posteriormente, de Gestão de Pessoas. Em 2018 guiei a empresa como Diretor-Presidente na busca de atingir nossas metas do planejamento estratégico.",
   },
 ];
-
-export const Experiences = () => {
-  const [experienceShow, setExperienceShow] = useState(experiencesArray[0]);
-  const theme = useTheme();
-
-  useEffect(() => {
-    const experienceSection = document.getElementById("experience-list");
-    const firstListItem = experienceSection.children[0];
-    firstListItem.id = "selectedButton";
-  }, []);
-
-  const handleChange = (e) => {
-    const arraySize = experiencesArray.length;
-    const list = e.target.parentNode;
-    for (let i = 0; i < arraySize; i++) {
-      list.children[i].id = "";
-      if (e.target.innerText === experiencesArray[i].company) {
-        setExperienceShow(experiencesArray[i]);
-        e.target.id = "selectedButton";
-      }
-    }
-  };
-
-  return (
-    <ThemeProvider theme={theme}>
-      <ExperienceContainer id="experiences">
-        <ExperienceWrapper>
-          <DisplayTitle>Experiência</DisplayTitle>
-
-          <Display>
-            <ExperienceList id="experience-list">
-              {experiencesArray.map((item) => {
-                return (
-                  <ListItem key={item.company} onClick={(e) => handleChange(e)}>
-                    {item.company}
-                  </ListItem>
-                );
-              })}
-            </ExperienceList>
-
-            <ExperienceInfo>
-              <ExperienceTitleWrapper>
-                <ExperienceTitle>{experienceShow.position}</ExperienceTitle>
-                <ExperienceDate>{experienceShow.time}</ExperienceDate>
-              </ExperienceTitleWrapper>
-              <ExperienceEmployer>{experienceShow.company}</ExperienceEmployer>
-              <ExperienceDescription>
-                {experienceShow.description}
-              </ExperienceDescription>
-            </ExperienceInfo>
-          </Display>
-        </ExperienceWrapper>
-      </ExperienceContainer>
-    </ThemeProvider>
-  );
-};

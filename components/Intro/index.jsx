@@ -1,3 +1,5 @@
+import { ThemeProvider, useTheme } from "styled-components";
+import { LinkButton } from "../LinkButton";
 import {
   IntroContainer,
   IntroWrapper,
@@ -5,8 +7,6 @@ import {
   IntroTitle,
   IntroButtons,
 } from "./styles";
-import { LinkButton } from "../LinkButton";
-import { ThemeProvider, useTheme } from "styled-components";
 
 export const Intro = () => {
   const theme = useTheme();
