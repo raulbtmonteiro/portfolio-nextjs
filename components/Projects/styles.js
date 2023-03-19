@@ -65,17 +65,42 @@ export const CardImg = styled.img`
   }
 `;
 
+export const CardTitleContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1.25em;
+  @media screen and (max-width: 720px) {
+    margin-bottom: 1em;
+  }
+`;
+
 export const CardTitle = styled.h3`
   font-weight: 500;
   font-size: 24px;
   line-height: 1.2em;
 
-  margin-bottom: 1.25em;
+  margin-right: 0.8em;
   color: ${(props) => props.theme.colors.light};
 
   @media screen and (max-width: 720px) {
     font-size: 16px;
-    margin-bottom: 1em;
+  }
+`;
+
+export const CardIsDone = styled.p`
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.7em;
+
+  padding: 0 0.5em;
+  color: ${(props) => props.theme.colors.light};
+  background-color: #1b585c;
+  opacity: 0.6;
+  border-radius: 4px;
+
+  @media screen and (max-width: 720px) {
+    font-size: 12px;
   }
 `;
 
@@ -111,7 +136,7 @@ export const CardButtonWrapper = styled.div`
   display: flex;
   gap: 10px;
   width: 100%;
-`
+`;
 export const CardButton = styled.a`
   display: flex;
   justify-content: center;
