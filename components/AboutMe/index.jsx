@@ -67,7 +67,7 @@ export const AboutMe = () => {
                 title="Currículo"
                 imgSrc="/images/download-cloud.svg"
                 imgAlt="Download da nuvem."
-                link="https://drive.google.com/u/4/uc?id=1CUrS9Ki99NwmrdI4R8Je31_ShRAYgKkC&export=download"
+                link="https://drive.google.com/uc?id=1U9H8RnmREONABs9IUqUDZQ58ArKpRGbp&export=download"
                 download
                 borderColor1="#D24074"
                 borderColor2="#6518B4"
