@@ -35,13 +35,11 @@ export default class MyDocument extends Document {
       <Html lang="pt-br"> 
         <Head />
         <body>
-          {/* Google Tag Manager (noscript) */}
           <noscript
-          dangerouslySetInnerHTML={{
-            __html: '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTCR6RX" height="0" width="0" style="display:none;visibility:hidden"></iframe>'
-          }}
+            dangerouslySetInnerHTML={{
+              __html: '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTCR6RX" height="0" width="0" style="display:none;visibility:hidden"></iframe>'
+            }}
           />
-          {/* End Google Tag Manager (noscript) */}
           <Main />
           <NextScript />
         </body>
