@@ -8,16 +8,16 @@ import {
   IntroButtons,
 } from "./styles";
 
-export const Intro = () => {
+export const Intro = ({ data }) => {
   const theme = useTheme();
 
   return (
     <ThemeProvider theme={theme}>
       <IntroContainer>
         <IntroWrapper>
-          <IntroDescription>Olá, eu sou</IntroDescription>
-          <IntroTitle>Raul Monteiro</IntroTitle>
-          <IntroDescription>Desenvolvedor WEB</IntroDescription>
+          <IntroDescription>{data.introduction[0].text}</IntroDescription>
+          <IntroTitle>{data.name[0].text}</IntroTitle>
+          <IntroDescription>{data.occupation[0].text}</IntroDescription>
           <IntroButtons>
             <LinkButton
               title="Linkedin"

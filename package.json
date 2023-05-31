@@ -1,12 +1,13 @@
 {
   "name": "portfolio-nextjs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build":  "next build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "next build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "slicemachine": "start-slicemachine"
   },
   "repository": {
     "type": "git",
@@ -22,9 +23,18 @@
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
-    "next": "^12.1.6",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "@prismicio/client": "^7.0.1",
+    "@prismicio/next": "^1.2.1",
+    "@prismicio/react": "^2.6.2",
+    "eslint-config-next": "^13.4.4",
+    "next": "^13.4.4",
+    "prismic-javascript": "^3.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@slicemachine/adapter-next": "^0.2.0",
+    "slice-machine-ui": "^1.1.0"
   }
 }

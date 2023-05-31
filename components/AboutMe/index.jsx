@@ -32,7 +32,7 @@ const socialMediaArray = [
   },
 ];
 
-export const AboutMe = () => {
+export const AboutMe = ({data}) => {
   const theme = useTheme();
 
   return (
@@ -40,19 +40,14 @@ export const AboutMe = () => {
       <AboutMeContainer id="#aboutme">
         <AboutMeWrapper>
           <AboutMeImg
-            src="/images/foto.jpg"
-            alt="Selfie de Raul Monteiro."
+            src={data.profile_image.url}
+            alt={data.profile_image.alt}
             loading="lazy"
           />
           <div>
-            <AboutMeTitle>Sobre mim</AboutMeTitle>
-            <AboutMeLocation>Campinas, São Paulo</AboutMeLocation>
-            <AboutMeDescription>
-              Mineiro de Beagá. 26 anos. Desenvolvedor de aplicações web, em
-              especial no front-end. Principais stacks: HTML, CSS, JavaScript,
-              TypeScript, React, styled-components, NextJS, VTEX IO, Java.
-              Abaixo estão as minhas redes sociais para contato.
-            </AboutMeDescription>
+            <AboutMeTitle>{data.title[0].text}</AboutMeTitle>
+            <AboutMeLocation>{data.location[0].text}</AboutMeLocation>
+            <AboutMeDescription>{data.description[0].text}</AboutMeDescription>
             <SocialMediaList>
               {socialMediaArray.map((item) => {
                 return (
