@@ -60,7 +60,12 @@ export const getStaticProps = async () => {
 
   const about = await cliente.getSingle("sobre_mim");
 
-  const experiences = await cliente.getAllByType("experiencia");
+  const experiences = await cliente.getAllByType("experiencia", {
+    orderings: {
+      field: "document.first_publication_date",
+      direction: "desc",
+    },
+  });
   const experiencesData = await experiences.map((item) => {
     return {
       company: item.data.company[0].text,
@@ -71,7 +76,12 @@ export const getStaticProps = async () => {
     };
   });
 
-  const projects = await cliente.getAllByType("projeto");
+  const projects = await cliente.getAllByType("projeto", {
+    orderings: {
+      field: "document.first_publication_date",
+      direction: "desc",
+    },
+  });
   const projectsData = await projects.map((item) => {
     return {
       name: item.data.name[0].text,
