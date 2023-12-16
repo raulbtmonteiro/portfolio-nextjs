@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { ThemeProvider, useTheme } from "styled-components";
 import {
   ExperienceContainer,
   ExperienceWrapper,
@@ -18,7 +17,6 @@ import {
 export const Experiences = ({ data }) => {
   const [experienceShow, setExperienceShow] = useState(data[0]);
   const experienceListRef = useRef();
-  const theme = useTheme();
 
   useEffect(() => {
     experienceListRef.current.children[0].id = "selectedButton";
@@ -35,37 +33,35 @@ export const Experiences = ({ data }) => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <ExperienceContainer id="experiences">
-        <ExperienceWrapper>
-          <DisplayTitle>Experiência</DisplayTitle>
+    <ExperienceContainer id="experiences">
+      <ExperienceWrapper>
+        <DisplayTitle>Experiência</DisplayTitle>
 
-          <Display>
-            <ExperienceList ref={experienceListRef}>
-              {data.map((item) => {
-                return (
-                  <ListItem key={item.company} onClick={(e) => handleChange(e)}>
-                    {item.company}
-                  </ListItem>
-                );
-              })}
-            </ExperienceList>
+        <Display>
+          <ExperienceList ref={experienceListRef}>
+            {data.map((item) => {
+              return (
+                <ListItem key={item.company} onClick={(e) => handleChange(e)}>
+                  {item.company}
+                </ListItem>
+              );
+            })}
+          </ExperienceList>
 
-            <ExperienceInfo>
-              <ExperienceTitleWrapper>
-                <ExperienceTitle>{experienceShow.position}</ExperienceTitle>
-                <ExperienceDate>
-                  {experienceShow.initialDate} - {experienceShow.finalDate}
-                </ExperienceDate>
-              </ExperienceTitleWrapper>
-              <ExperienceEmployer>{experienceShow.company}</ExperienceEmployer>
-              <ExperienceDescription>
-                {experienceShow.description}
-              </ExperienceDescription>
-            </ExperienceInfo>
-          </Display>
-        </ExperienceWrapper>
-      </ExperienceContainer>
-    </ThemeProvider>
+          <ExperienceInfo>
+            <ExperienceTitleWrapper>
+              <ExperienceTitle>{experienceShow.position}</ExperienceTitle>
+              <ExperienceDate>
+                {experienceShow.initialDate} - {experienceShow.finalDate}
+              </ExperienceDate>
+            </ExperienceTitleWrapper>
+            <ExperienceEmployer>{experienceShow.company}</ExperienceEmployer>
+            <ExperienceDescription>
+              {experienceShow.description}
+            </ExperienceDescription>
+          </ExperienceInfo>
+        </Display>
+      </ExperienceWrapper>
+    </ExperienceContainer>
   );
 };

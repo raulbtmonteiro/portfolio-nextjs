@@ -1,4 +1,3 @@
-import { ThemeProvider, useTheme } from "styled-components";
 import {
   ProjectsContainer,
   ProjectsWrapper,
@@ -16,47 +15,41 @@ import {
 } from "./styles";
 
 export const Projects = ({ data }) => {
-  const theme = useTheme();
-
   const filteredProjects = data.filter((item) => item.show === true);
 
   return (
-    <ThemeProvider theme={theme}>
-      <ProjectsContainer id="projects">
-        <ProjectsWrapper>
-          <ProjectsTitle>Projetos</ProjectsTitle>
-          <ProjectsDisplay>
-            {filteredProjects.map((item) => {
-              return (
-                <ProjectCard key={item.name}>
-                  <a href={item.deployLink} target="_blank" rel="noreferrer">
-                    <CardImg src={item.img} alt={item.alttex} loading="lazy" />
-                  </a>
-                  <CardTitleContainer>
-                    <CardTitle>{item.name}</CardTitle>
-                    {!item.isDone && (
-                      <CardIsDone>em desenvolvimento</CardIsDone>
-                    )}
-                  </CardTitleContainer>
-                  <CardDescription>{item.description}</CardDescription>
-                  <CardTecnologies>{item.stacks}</CardTecnologies>
-                  <CardButtonWrapper>
-                    <CardButton target="_blank" href={item.deployLink}>
-                      <img src="/images/link.svg" alt="ícone de link" />{" "}
-                      Visualizar
-                    </CardButton>
+    <ProjectsContainer id="projects">
+      <ProjectsWrapper>
+        <ProjectsTitle>Projetos</ProjectsTitle>
+        <ProjectsDisplay>
+          {filteredProjects.map((item) => {
+            return (
+              <ProjectCard key={item.name}>
+                <a href={item.deployLink} target="_blank" rel="noreferrer">
+                  <CardImg src={item.img} alt={item.alttex} loading="lazy" />
+                </a>
+                <CardTitleContainer>
+                  <CardTitle>{item.name}</CardTitle>
+                  {!item.isDone && <CardIsDone>em desenvolvimento</CardIsDone>}
+                </CardTitleContainer>
+                <CardDescription>{item.description}</CardDescription>
+                <CardTecnologies>{item.stacks}</CardTecnologies>
+                <CardButtonWrapper>
+                  <CardButton target="_blank" href={item.deployLink}>
+                    <img src="/images/link.svg" alt="ícone de link" />{" "}
+                    Visualizar
+                  </CardButton>
 
-                    <CardButton target="_blank" href={item.repositoryLink}>
-                      <img src="/images/link.svg" alt="ícone de link" />{" "}
-                      Repositório
-                    </CardButton>
-                  </CardButtonWrapper>
-                </ProjectCard>
-              );
-            })}
-          </ProjectsDisplay>
-        </ProjectsWrapper>
-      </ProjectsContainer>
-    </ThemeProvider>
+                  <CardButton target="_blank" href={item.repositoryLink}>
+                    <img src="/images/link.svg" alt="ícone de link" />{" "}
+                    Repositório
+                  </CardButton>
+                </CardButtonWrapper>
+              </ProjectCard>
+            );
+          })}
+        </ProjectsDisplay>
+      </ProjectsWrapper>
+    </ProjectsContainer>
   );
 };
