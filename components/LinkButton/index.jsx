@@ -1,17 +1,25 @@
 import { Button } from "./styles";
 
-export const LinkButton = (props) => {
+export const LinkButton = ({
+  theme,
+  borderColor1,
+  borderColor2,
+  link,
+  download,
+  imgSrc,
+  title,
+}) => {
   return (
     <Button
-      theme={props.theme}
-      borderColor1={props.borderColor1}
-      borderColor2={props.borderColor2}
-      href={props.link}
+      theme={theme}
+      borderColor1={borderColor1}
+      borderColor2={borderColor2}
+      href={link}
       target="_blank"
-      download={props.download}
+      download={download}
     >
-      <img src={props.imgSrc} alt={props.imgAlt} />
-      {props.title}
+      <img src={imgSrc} aria-hidden loading="lazy" />
+      {title}
     </Button>
   );
 };

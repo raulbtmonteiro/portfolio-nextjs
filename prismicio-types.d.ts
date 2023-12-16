@@ -279,6 +279,17 @@ interface SobreMimDocumentData {
    *
    */
   description: prismic.RichTextField;
+  /**
+   * Curriculo field in *Sobre mim*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: sobre_mim.curriculo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+   *
+   */
+  curriculo: prismic.LinkField;
 }
 /**
  * Sobre mim document from Prismic

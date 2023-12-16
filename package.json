@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "slicemachine": "start-slicemachine"
   },
@@ -23,7 +24,7 @@
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
-    "@prismicio/client": "^7.0.1",
+    "@prismicio/client": "^7.3.1",
     "@prismicio/next": "^1.2.1",
     "@prismicio/react": "^2.6.2",
     "eslint-config-next": "^13.4.4",
