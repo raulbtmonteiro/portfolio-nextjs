@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   HeaderContainer,
   HeaderWrapper,
@@ -13,6 +13,22 @@ import {
 
 export const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [componentHigh, setComponentHigh] = useState(371);
+
+  const handleClick = (link) => {
+    setIsVisible(!isVisible);
+    if (link === "#aboutme") {
+      window.scrollTo(0, componentHigh);
+    }
+  };
+
+  useEffect(() => {
+    if (window.innerWidth > 720) {
+      setComponentHigh(676);
+    } else {
+      setComponentHigh(371);
+    }
+  }, []);
 
   return (
     <HeaderContainer>
@@ -21,12 +37,8 @@ export const Header = () => {
         <HeaderNavBar isVisible={isVisible}>
           {navItens.map((item) => {
             return (
-              <div key={item.title} onClick={() => setIsVisible(!isVisible)}>
-                {item.title == "Sobre mim" ? (
-                  <Link href={item.link}>{item.title}</Link>
-                ) : (
-                  <Link href={item.link}>{item.title}</Link>
-                )}
+              <div key={item.link} onClick={() => handleClick(item.link)}>
+                <Link href={item.link}>{item.title}</Link>
               </div>
             );
           })}
